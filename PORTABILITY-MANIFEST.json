@@ -1,6 +1,56 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-11-02",
   "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 73,
+      "sha256": "cb55fe38d802c8de2d516a2949ac3531802a070ca8e2335ef957086553dd6ab7"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 790,
+      "sha256": "6f3c9f5b0d3a53f5d0312536c4ade7c081ea5d4431a7f4864358d00434aae313"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 37,
+      "sha256": "f33aa1e8887820e03f5bf0643c6fe12a9163e7582fe40dad3cf6ca988c1852d7"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1807,
+      "sha256": "60588897bcd32f7c6f7b502d4711922c163f0d51a57482fda55fd36b776767f6"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "bytes": 4882,
+      "sha256": "f141d8c496380abc8c68387ef9cde48ca0a226631415a82a67e3981e53ddcd6a"
+    },
+    {
+      "path": "DECISIONS.md",
+      "bytes": 4059,
+      "sha256": "133f00244a60eed602f0e77d0913cfdfc940e5d48a5045f86430c66ed43b8b62"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2620,
+      "sha256": "17976694c8bac2ca0df19eff3386e1457cf53e919e94ab66959444de64cb92d9"
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "bytes": 2045,
+      "sha256": "81ae8b257b58692326ff7c2f55e410df08225815f1c5a1fda7d4126c0bfe513b"
+    },
+    {
+      "path": "START-HERE.md",
+      "bytes": 1399,
+      "sha256": "20740218d89c06310ffa4fef4b7d3f7ee4024ec5e84a497ad3287036c6d07e01"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 6927,
+      "sha256": "faea2c144309ddc389d49809bb930c64069321bd225c9d3438d656a5ea0569a5"
+    },
     {
       "path": "assets/factions/concord.png",
       "bytes": 1321370,
@@ -13,83 +63,158 @@
     },
     {
       "path": "assets/hero-refresh-v7-manifest.json",
-      "bytes": 15014,
-      "sha256": "280fc488d697988b263de46645cad9befd4b492d1a6cb62a1110f9a3cff90de6"
+      "bytes": 14770,
+      "sha256": "2868d1396cbac0973408baabce0a8247acb43c963358eb07b15440e0d0fc5493"
     },
     {
-      "path": "assets/heroes/approved-v9/h01-kalawi-bloodmane.png",
-      "bytes": 2288514,
-      "sha256": "79e55177af9216de0336e47fefd13e963b31b48429557310af3f442fc6d7b887"
+      "path": "assets/heroes/current/h01-bisti-grasshade.png",
+      "bytes": 3300113,
+      "sha256": "7848ddaf18eadf29d76e456634033f6920d787aa9d102ff727ad28d647abee79"
     },
     {
-      "path": "assets/heroes/approved-v9/h02-brynja-stonehide.png",
-      "bytes": 2469086,
-      "sha256": "ebb83c0ed6fe7deedcd335ec962612f95f396072854ccd0cc7cf7e318176eff2"
+      "path": "assets/heroes/current/h02-brynja-stonehide.png",
+      "bytes": 3056022,
+      "sha256": "6b7cd1260e363aea86d86a3d29ea79d8ab20a5bad4e348f109133e85116b6045"
     },
     {
-      "path": "assets/heroes/approved-v9/h03-voru-cinderveil.png",
-      "bytes": 1957812,
-      "sha256": "ee8ff27ec15f11617549e2aea98bfa22ac80ef0d0ca5699431f7fdc751c0e5bf"
+      "path": "assets/heroes/current/h03-voru-cinderveil.png",
+      "bytes": 3057795,
+      "sha256": "923c3344671943b6e6608f888f839c350fd59218b5b2bef10b5a0713a684ff39"
     },
     {
-      "path": "assets/heroes/approved-v9/h04-tavi-sailwhistle.png",
-      "bytes": 2224070,
-      "sha256": "5e55edc8deb84b0eb356690aa19a9c9b1120eeb021084db01b505c887dc28730"
+      "path": "assets/heroes/current/h04-tavi-sailwhistle.png",
+      "bytes": 3100878,
+      "sha256": "a3b695ab740302733774a46adc8c1df472ca18a6a03ff980949965b216423827"
     },
     {
-      "path": "assets/heroes/approved-v9/h05-marda-oakweaver.png",
-      "bytes": 1946343,
-      "sha256": "7583a4d43e3d77660c066507c8dd19b632f9c37ab0b583d67a114d8ca2e188eb"
+      "path": "assets/heroes/current/h05-marda-oakweaver.png",
+      "bytes": 3019944,
+      "sha256": "d37f09adce528aba69301638f65bfcae1fcfd441d083f97611dae0d11780c27c"
     },
     {
-      "path": "assets/heroes/approved-v9/h06-niala-grassveil.png",
-      "bytes": 2194914,
-      "sha256": "b9555cca6647cf51d48cba423816a9eff726044f98f403f24d2939a47dfe8d65"
+      "path": "assets/heroes/current/h06-niala-grassveil.png",
+      "bytes": 3159147,
+      "sha256": "75ce8d8f458318e2906cae79fad514d95a43aeaa7c705aff581cf5db86a0e8a9"
     },
     {
-      "path": "assets/heroes/approved-v9/h07-eirik-hearthkeeper.png",
-      "bytes": 2202160,
-      "sha256": "8a229284f4c414a5f02ce3e2f2f956994d4b9e90b3a7ac3576b6a84e70a6b049"
+      "path": "assets/heroes/current/h07-eirik-hearthkeeper.png",
+      "bytes": 3236096,
+      "sha256": "f9d4580964fafc5d0729b146b569f8ba5604cfb1c15bc2a03af8fa78d9902eff"
     },
     {
-      "path": "assets/heroes/approved-v9/h08-ketu-ashheart.png",
-      "bytes": 1907303,
-      "sha256": "82b34f61a78566d3d306d60d07cc399e0b75dd18eaabc97db03630fb42e66d42"
+      "path": "assets/heroes/current/h08-ketu-ashheart.png",
+      "bytes": 3038626,
+      "sha256": "ce591d31c9c9414bab0790a394c0cc40e70ac9aa022a2742111abe2392ab4c71"
     },
     {
-      "path": "assets/heroes/approved-v9/h09-ren-timberwright.png",
-      "bytes": 2113497,
-      "sha256": "8f2429f58370e47c9cb1d40c958bfee20494c172cdd02e470584159bf20fb7be"
+      "path": "assets/heroes/current/h09-ren-timberwright.png",
+      "bytes": 3136639,
+      "sha256": "4491d5b0202a80f60aabce572ca5093fe64622889ef92b87e69691c2dbed6a1f"
     },
     {
-      "path": "assets/heroes/approved-v9/h10-orro-stormanchor.png",
-      "bytes": 2410512,
-      "sha256": "c3c56fd9cf6c068c6e9513b63d619ae50ed2b3603ca7e1056c7b0a0fa12f1d45"
+      "path": "assets/heroes/current/h10-orro-stormanchor.png",
+      "bytes": 2970063,
+      "sha256": "2de0b2798634860ae8f80e98d6657cb1d731fc746610b51d64e944edd17529e1"
     },
     {
-      "path": "assets/heroes/new-starters/h11-hester-wellward.png",
-      "bytes": 2496374,
-      "sha256": "5af9647d6cd79f6acd25d98ee6c02901b4847a71826fb441cd020938fa3747a6"
+      "path": "assets/heroes/current/h11-hester-wellward.png",
+      "bytes": 3321143,
+      "sha256": "d4698ce6e49cb5bd87910b3bc209b5fa1cea3651c66a7fc8b55a4f2b1f68ca1b"
     },
     {
-      "path": "assets/heroes/new-starters/h12-perrin-lastdrop.png",
-      "bytes": 2229293,
-      "sha256": "a7a409cb0dd2b99ed3ba7ce3e8d7078716231a2d5363b8f8b0e4d8410ce312ca"
+      "path": "assets/heroes/current/h12-perrin-lastdrop.png",
+      "bytes": 3035450,
+      "sha256": "d5c9e320bea6a7339855a99a61991bef167a641fd632b3613d8ca5cbb92a2a5b"
     },
     {
-      "path": "assets/heroes/new-starters/h13-demea-lastbanner.png",
-      "bytes": 2561792,
-      "sha256": "a8cd9b15bf447c6d2b57de2443d829472014bc5d87cc0a2894fcabae23a8a505"
+      "path": "assets/heroes/current/h13-demea-lastbanner.png",
+      "bytes": 3390549,
+      "sha256": "1b289a6f7df28ccc81bc929c98b36171c90634aec4a9fa3fe99418ab2a63cddc"
     },
     {
-      "path": "assets/heroes/new-starters/h14-ilex-marchstep.png",
-      "bytes": 2351653,
-      "sha256": "91c92c3ba44dc2525311c8aefb04360ac58612238614706201283ef0aa2f778e"
+      "path": "assets/heroes/current/h14-ilex-marchstep.png",
+      "bytes": 3142734,
+      "sha256": "8f31059856f54c665262d5b86cceaca5093bd79c639d505a1ea9c3f67f4cd4c6"
+    },
+    {
+      "path": "assets/heroes/current/h15-kalawi-bloodmane.png",
+      "bytes": 3130512,
+      "sha256": "2cbffd88967b5c8ec017ede1299a21d5cc4f18921731adbef4d0e12b094716b2"
+    },
+    {
+      "path": "assets/heroes/current/manifest.json",
+      "bytes": 6409,
+      "sha256": "c6089edf95b2af87e41cd229f9da079762b98bd3b5c3f4dc6bf9b83dd3016cc0"
+    },
+    {
+      "path": "assets/heroes/current/reference-bloodmane.png",
+      "bytes": 3351102,
+      "sha256": "3920b43eb55c87c9b5a4e46a829ab1f91e98f910609456712f348a80950aa6ed"
+    },
+    {
+      "path": "assets/heroes/index.html",
+      "bytes": 2428,
+      "sha256": "856d4240a189e00bc9afa9d2585cbbc86607600e8b9902b1f6e7e0bb37576172"
     },
     {
       "path": "assets/heroes/new-starters/provenance.json",
       "bytes": 1495,
       "sha256": "11f7070bf4c49a14045fe39875aa3afe80ac33d32c4fc15eb1de0238e6383011"
+    },
+    {
+      "path": "assets/icons/attack.svg",
+      "bytes": 212,
+      "sha256": "ac43d66e0a10c0489285b3008a8129c04a2556edca03d4fc828c1648103dd63d"
+    },
+    {
+      "path": "assets/icons/bow.svg",
+      "bytes": 218,
+      "sha256": "7177ee1d8f52503e3c1f00a7df04060aa32026e0fd9b6afe6c65fdc2f8d3cb55"
+    },
+    {
+      "path": "assets/icons/earth.svg",
+      "bytes": 257,
+      "sha256": "cbf68b99422a3bbd115bf077fc54fdb71d933c744599fd044a22b4c95d853c10"
+    },
+    {
+      "path": "assets/icons/fire.svg",
+      "bytes": 303,
+      "sha256": "1ba5e542c2770f1e49c3428ceae8e8edb208a5e9591ed75b75d9271f1606709b"
+    },
+    {
+      "path": "assets/icons/generic-element.svg",
+      "bytes": 526,
+      "sha256": "756c4fb2e65c2677795eee2032ef1379ca7a9ce188a2fef1162dfa1a51a4158a"
+    },
+    {
+      "path": "assets/icons/ice.svg",
+      "bytes": 314,
+      "sha256": "14375f7ee4e4de0492a93e281b31f61cdfebc6b7da34f7390bf0ce94d7d17e76"
+    },
+    {
+      "path": "assets/icons/lightning.svg",
+      "bytes": 244,
+      "sha256": "d965d2873a5661ab09d0ba2f17c087d8eb36069ff7bf667f01c84cb3088d2710"
+    },
+    {
+      "path": "assets/icons/metal.svg",
+      "bytes": 262,
+      "sha256": "e55470ad2e2a16015592dd591bcb6ccf42001963e5a3063019fa3fba212031fc"
+    },
+    {
+      "path": "assets/icons/smoke.svg",
+      "bytes": 274,
+      "sha256": "799cec81691aaaa4ef119f5f2100e665a86fbd5a8f4a74c6b2f741c51d2373ff"
+    },
+    {
+      "path": "assets/icons/water.svg",
+      "bytes": 269,
+      "sha256": "501f8e2d023c55794f48d2c4b2ba07fa1b7647e0df8132dcd6680e1fc27d513d"
+    },
+    {
+      "path": "assets/icons/wind.svg",
+      "bytes": 329,
+      "sha256": "19e633cd3f278d33814ddad0c46e032d723df59b6d56ca1d9bf960f9a1e87277"
     },
     {
       "path": "assets/manifest.json",
@@ -157,14 +282,29 @@
       "sha256": "be256b761250f4dfa9adf5a12192d1fc70a3d21f47336e37f3c6a485d87934de"
     },
     {
+      "path": "index.html",
+      "bytes": 541,
+      "sha256": "2db3379c88e843aa8fc206f7ec01dc2f5f23c49a024b3cbbed5b96c780d1d6f5"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 77107,
+      "sha256": "e4d57a8f175fbddc04e94878355f747ed0dab7ced18fc6f133292371c3947da6"
+    },
+    {
+      "path": "package.json",
+      "bytes": 786,
+      "sha256": "1051d2d0ce7a0bde99cf56042be04c04f524fbb2028b5a161fec4aa1c94dd240"
+    },
+    {
       "path": "planning/build-spec-current.txt",
-      "bytes": 37915,
-      "sha256": "07404f64c521c071ebf2dfefeb6b2a2ed62f7320d97db62accef2defd7afef08"
+      "bytes": 26733,
+      "sha256": "05c6b3855f006d8ba219337a696a65c8886244a83a0a7cdfbb60a728f02324b8"
     },
     {
       "path": "planning/design-draft-current.txt",
-      "bytes": 38862,
-      "sha256": "eafa6421ade6da282c8e89d2dedfb9e6cdffaaed28e806a970a849a140317253"
+      "bytes": 46776,
+      "sha256": "cdcf7a838f5c3a8d92add7f09d9b0be0a7c3b09dbaed89bb615ebcbc9d18b277"
     },
     {
       "path": "planning/hero-refresh-v9/manifest.json",
@@ -177,14 +317,44 @@
       "sha256": "37c1a585278eeb65447ba88957d076b52bc517d73eda41963eb6a7973f710013"
     },
     {
+      "path": "planning/implementation-v15.md",
+      "bytes": 905,
+      "sha256": "376e8f493ffc55c3b779d3ed6afab83fc573ecb0acabd6bc91ebcaa036793984"
+    },
+    {
+      "path": "planning/rules-quick-sheet-current.txt",
+      "bytes": 6768,
+      "sha256": "49fe059bf4e956c4e93b6cbfadcba1d3144ecb88bc4fd01385c5a69412784dd7"
+    },
+    {
+      "path": "planning/sol-update-2026-10-30.md",
+      "bytes": 10579,
+      "sha256": "b08b8ee1f19b7754992b46b557396fcfba41c75bdc9416f29c7e1aaff157f95a"
+    },
+    {
+      "path": "planning/source-revisions.json",
+      "bytes": 1369,
+      "sha256": "326f1443c4b4b814350a8e9418d26117ed4d54d70ba9e42d6d55e0b0beda7cbf"
+    },
+    {
+      "path": "planning/source-update-2026-10-30.json",
+      "bytes": 1333,
+      "sha256": "5304722949244b31b5725a76395d0ec1e00171fb1e40761c0c0f62e026c773b7"
+    },
+    {
+      "path": "print-and-play/README.md",
+      "bytes": 727,
+      "sha256": "785eb7fa9664a057e504e851864fda2a384ed6ff7e458fa1f06db18cde8204ba"
+    },
+    {
       "path": "print-and-play/build.py",
-      "bytes": 23614,
-      "sha256": "097749ca5364609c554a95baae914d9ee4301f3a591956554a0f8bad9479ff2e"
+      "bytes": 23311,
+      "sha256": "2490806a605304e48b90d3a405acf20f6e30c7f57787fa995c1bb3d3ae5d68b3"
     },
     {
       "path": "print-and-play/build_current.py",
-      "bytes": 16031,
-      "sha256": "fec1fe709dfa4a76e84438b037921250e3403514abc7809431f0fa7cfa8a0308"
+      "bytes": 15847,
+      "sha256": "5b42d0383ab3d598b7b37b299c404b0bfca198cd971830556c200d9f2af848cc"
     },
     {
       "path": "print-and-play/current/00-rules-and-legend.pdf",
@@ -278,8 +448,8 @@
     },
     {
       "path": "print-and-play/current/manifest.json",
-      "bytes": 4308,
-      "sha256": "56f61e23a3c16c27bcc10aa1f45f693cc15b7af44691c070274da5269b049237"
+      "bytes": 4125,
+      "sha256": "d3ae3e01db136461e379a1794f98e1d046062e3e16d5f21780e54f9b3cd62bae"
     },
     {
       "path": "print-and-play/current/preview-01.png",
@@ -387,11 +557,6 @@
       "sha256": "7b51ad4f8894f35646f61802fce096d62a431d09250f3da7c50d2cf6223d54d6"
     },
     {
-      "path": "print-and-play/README.md",
-      "bytes": 727,
-      "sha256": "785eb7fa9664a057e504e851864fda2a384ed6ff7e458fa1f06db18cde8204ba"
-    },
-    {
       "path": "print-and-play/requirements.txt",
       "bytes": 87,
       "sha256": "58f1e25bc411bb673177d5ebed11a4fc6fd0fee29f179e70931fbc1b31f32389"
@@ -412,54 +577,94 @@
       "sha256": "4f47bb9d42c2e245282836f39faa70443ee83ac0c4aac7b7599136a77e1c18d8"
     },
     {
-      "path": "public/heroes-v7/h01-kalawi-bloodmane.png",
-      "bytes": 2524968,
-      "sha256": "c1f38efe1ae0f9de8377d775dc54c793cb95d2eda7baa46ab9038145901f8453"
+      "path": "prototype.json",
+      "bytes": 1552,
+      "sha256": "f298c42d14fc0b587cf05398d0cc794112cfdf746ccd8310d355c6da928d3bb9"
     },
     {
-      "path": "public/heroes-v7/h02-brynja-stonehide.png",
-      "bytes": 2574645,
-      "sha256": "869afae7addd364db126ab60dec5fc4c0ee2f358bc02d6e1a5b6c12b94a74d83"
+      "path": "public/factions/concord.png",
+      "bytes": 1321370,
+      "sha256": "65db35050a51a3cc1c1167472028243abf57c0cc09b730f4f2f33a9cef0266be"
     },
     {
-      "path": "public/heroes-v7/h03-voru-cinderveil.png",
-      "bytes": 2024223,
-      "sha256": "998e9e8a81e9fe139aec126d298dcedd78c891d5d43d3a81b37cc45daa182adc"
+      "path": "public/factions/wildmoon.png",
+      "bytes": 1751583,
+      "sha256": "95d24de6ed7bc4c615037f2736cc0d9b62cb855d6000e92bbf254810c9cac2c2"
     },
     {
-      "path": "public/heroes-v7/h04-tavi-sailwhistle.png",
-      "bytes": 2171624,
-      "sha256": "cfa325b6b6b0d4adbedda6b32c83e3b84c772dae5464de1e46d7ec16fc88263d"
+      "path": "public/heroes-current/h01-bisti-grasshade.png",
+      "bytes": 3300113,
+      "sha256": "7848ddaf18eadf29d76e456634033f6920d787aa9d102ff727ad28d647abee79"
     },
     {
-      "path": "public/heroes-v7/h05-marda-oakweaver.png",
-      "bytes": 1828393,
-      "sha256": "7323cc5f3ca44d76495e70d1d1d11f8039ac3aec1fb458ae900ba8f0ff7383d1"
+      "path": "public/heroes-current/h02-brynja-stonehide.png",
+      "bytes": 3056022,
+      "sha256": "6b7cd1260e363aea86d86a3d29ea79d8ab20a5bad4e348f109133e85116b6045"
     },
     {
-      "path": "public/heroes-v7/h06-niala-grassveil.png",
-      "bytes": 2044389,
-      "sha256": "c5d43a90ef2555510e9702d7ec0bd62b4347d8f8eb00ae3aa172a523eff7890d"
+      "path": "public/heroes-current/h03-voru-cinderveil.png",
+      "bytes": 3057795,
+      "sha256": "923c3344671943b6e6608f888f839c350fd59218b5b2bef10b5a0713a684ff39"
     },
     {
-      "path": "public/heroes-v7/h07-eirik-hearthkeeper.png",
-      "bytes": 2302476,
-      "sha256": "2195a48a846a82226cb1750adb8f7d0c0c64119ea0be94ffacb1272d2a0f23f8"
+      "path": "public/heroes-current/h04-tavi-sailwhistle.png",
+      "bytes": 3100878,
+      "sha256": "a3b695ab740302733774a46adc8c1df472ca18a6a03ff980949965b216423827"
     },
     {
-      "path": "public/heroes-v7/h08-ketu-ashheart.png",
-      "bytes": 1984246,
-      "sha256": "bb4c64426a805849e2b930ca5370a22db285bb265b0cff99a13e60a6a89ef7d8"
+      "path": "public/heroes-current/h05-marda-oakweaver.png",
+      "bytes": 3019944,
+      "sha256": "d37f09adce528aba69301638f65bfcae1fcfd441d083f97611dae0d11780c27c"
     },
     {
-      "path": "public/heroes-v7/h09-ren-timberwright.png",
-      "bytes": 2146850,
-      "sha256": "8450362e7f376dd534b8e8056b869b4242a9ca10c91f91babef17ff5b158a40e"
+      "path": "public/heroes-current/h06-niala-grassveil.png",
+      "bytes": 3159147,
+      "sha256": "75ce8d8f458318e2906cae79fad514d95a43aeaa7c705aff581cf5db86a0e8a9"
     },
     {
-      "path": "public/heroes-v7/h10-orro-stormanchor.png",
-      "bytes": 2303941,
-      "sha256": "db825d23e9f52ba113d0eabbcb9c4e4e3d50cad8e40a4fd0b930403aa2fdf4b5"
+      "path": "public/heroes-current/h07-eirik-hearthkeeper.png",
+      "bytes": 3236096,
+      "sha256": "f9d4580964fafc5d0729b146b569f8ba5604cfb1c15bc2a03af8fa78d9902eff"
+    },
+    {
+      "path": "public/heroes-current/h08-ketu-ashheart.png",
+      "bytes": 3038626,
+      "sha256": "ce591d31c9c9414bab0790a394c0cc40e70ac9aa022a2742111abe2392ab4c71"
+    },
+    {
+      "path": "public/heroes-current/h09-ren-timberwright.png",
+      "bytes": 3136639,
+      "sha256": "4491d5b0202a80f60aabce572ca5093fe64622889ef92b87e69691c2dbed6a1f"
+    },
+    {
+      "path": "public/heroes-current/h10-orro-stormanchor.png",
+      "bytes": 2970063,
+      "sha256": "2de0b2798634860ae8f80e98d6657cb1d731fc746610b51d64e944edd17529e1"
+    },
+    {
+      "path": "public/heroes-current/h11-hester-wellward.png",
+      "bytes": 3321143,
+      "sha256": "d4698ce6e49cb5bd87910b3bc209b5fa1cea3651c66a7fc8b55a4f2b1f68ca1b"
+    },
+    {
+      "path": "public/heroes-current/h12-perrin-lastdrop.png",
+      "bytes": 3035450,
+      "sha256": "d5c9e320bea6a7339855a99a61991bef167a641fd632b3613d8ca5cbb92a2a5b"
+    },
+    {
+      "path": "public/heroes-current/h13-demea-lastbanner.png",
+      "bytes": 3390549,
+      "sha256": "1b289a6f7df28ccc81bc929c98b36171c90634aec4a9fa3fe99418ab2a63cddc"
+    },
+    {
+      "path": "public/heroes-current/h14-ilex-marchstep.png",
+      "bytes": 3142734,
+      "sha256": "8f31059856f54c665262d5b86cceaca5093bd79c639d505a1ea9c3f67f4cd4c6"
+    },
+    {
+      "path": "public/heroes-current/h15-kalawi-bloodmane.png",
+      "bytes": 3130512,
+      "sha256": "2cbffd88967b5c8ec017ede1299a21d5cc4f18921731adbef4d0e12b094716b2"
     },
     {
       "path": "public/portraits/h01.png",
@@ -513,8 +718,223 @@
     },
     {
       "path": "public/scenario-1.png",
-      "bytes": 8670391,
-      "sha256": "ff6f13be946db314976adb13c7a300be3eb5c891d257fab19c5617a814402a47"
+      "bytes": 7575808,
+      "sha256": "dbfebd5889f406a746613c05a8c2973c3cd1ae871cb8c62856f6f626c13721e8"
+    },
+    {
+      "path": "scripts/assets.mjs",
+      "bytes": 2286,
+      "sha256": "08b2b0474039b956f16379f00e6abbbc6a6e72ed2073205d15dc1c09b31f9474"
+    },
+    {
+      "path": "scripts/balance.ts",
+      "bytes": 400,
+      "sha256": "1584c72c55b6f99bfc4ba9ddb373861228bb70fff73bd455766df3f9d1ebbc0d"
+    },
+    {
+      "path": "scripts/current-ui-check.mjs",
+      "bytes": 3669,
+      "sha256": "8a36d4baa186439bb9da2b2dfd3b066f98b4ca60a1a955f2bcc6988b4166cfba"
+    },
+    {
+      "path": "scripts/export-redesign.ts",
+      "bytes": 1200,
+      "sha256": "11b5ae195ffb757523acb1e1fb391878b355b9592395394ea026ddece46396f4"
+    },
+    {
+      "path": "scripts/fixtures.ts",
+      "bytes": 975,
+      "sha256": "02c77295768cc76b546babcad283a6206224732ec923db76c4d89a3ddf321731"
+    },
+    {
+      "path": "scripts/redesign-fixtures.ts",
+      "bytes": 1410,
+      "sha256": "d4cb0c6c7bad1aa338683a60ae0e96fcf58043be3fa6af3a72b4bc9d722981e0"
+    },
+    {
+      "path": "scripts/redesign-smoke.mjs",
+      "bytes": 2496,
+      "sha256": "05f25f8b8169df485bda42c5142ba8175a55883a6ca753d66c55eb8b696bd80e"
+    },
+    {
+      "path": "scripts/sim.ts",
+      "bytes": 2662,
+      "sha256": "3902acede98c5cdf5bccb1aafe052b6c1ac870e932d36a169b7c4981528c0c67"
+    },
+    {
+      "path": "scripts/smoke.mjs",
+      "bytes": 8655,
+      "sha256": "903f535b4cb8dcc5dfaf6d2d1ec91bde478447707be9dc61d8cfbb4ca149e7cb"
+    },
+    {
+      "path": "scripts/verify-portability.mjs",
+      "bytes": 866,
+      "sha256": "8c47729991dc0c19a49c727e80293bfc900e2a2ae4aff66e7be125d1aca0d16e"
+    },
+    {
+      "path": "sources/App-v8.tsx.txt",
+      "bytes": 31150,
+      "sha256": "36059da3888aba788e60bef3621dff408e9f7a2724c4c2c611ac892bd6a62c43"
+    },
+    {
+      "path": "sources/build-spec-current.txt",
+      "bytes": 26733,
+      "sha256": "05c6b3855f006d8ba219337a696a65c8886244a83a0a7cdfbb60a728f02324b8"
+    },
+    {
+      "path": "sources/content-v8.ts.txt",
+      "bytes": 8698,
+      "sha256": "a32097dd5e0bc1e4a80565e9ef4d695ad221f31c87255e50ce173d52e3fe9a99"
+    },
+    {
+      "path": "sources/design-draft-current.txt",
+      "bytes": 46776,
+      "sha256": "cdcf7a838f5c3a8d92add7f09d9b0be0a7c3b09dbaed89bb615ebcbc9d18b277"
+    },
+    {
+      "path": "sources/engine-v8.ts.txt",
+      "bytes": 40695,
+      "sha256": "c50e5f069b8c3d227835971dee975b82b16f7ceb143315491c1638fac46df656"
+    },
+    {
+      "path": "sources/hero-refresh-v7.md",
+      "bytes": 17589,
+      "sha256": "6a89597a30dd15cb93615ca58fc902f0c7cffaa3e4f28e84a5f21c8257a60a5b"
+    },
+    {
+      "path": "sources/pre-regional-redesign-content.txt",
+      "bytes": 6264,
+      "sha256": "c4b8f64b18fa5bae137bf4fbef21a248caec471d8a8331e30522aaca67f2d36f"
+    },
+    {
+      "path": "sources/pre-regional-redesign-engine.txt",
+      "bytes": 34790,
+      "sha256": "31bf8955e2b7d0b674dda5911f9937bf9f387b6e5dd5832e00c40e60d0882484"
+    },
+    {
+      "path": "sources/tests-v8/campaign.test.ts.txt",
+      "bytes": 2092,
+      "sha256": "5b705ca10be561ad71a4789e82cf884101bfa4451f49faea3bad7b1c73409791"
+    },
+    {
+      "path": "sources/tests-v8/effects.test.ts.txt",
+      "bytes": 4763,
+      "sha256": "cc253d9ed47fe9b9c17d73b9060a47abac6ef993edbf6cab4d93594999ef67ab"
+    },
+    {
+      "path": "sources/tests-v8/engine.test.ts.txt",
+      "bytes": 4326,
+      "sha256": "b2e1792a63d1bcb900af6f800c6b12e508b3d545a8660b3f6152aa2fbe9e8531"
+    },
+    {
+      "path": "sources/tests-v8/redesign.test.ts.txt",
+      "bytes": 9751,
+      "sha256": "a5377153c5a9e1e17a661b85b475b2fb87e5395671c74a63a232efd8d4b2cd21"
+    },
+    {
+      "path": "sources/tests-v8/refresh.test.ts.txt",
+      "bytes": 2683,
+      "sha256": "2b95ba0091da4f3df2f13c5a602eb1581ee4e2c0bce3dea1eb6fd89d9b9b0b43"
+    },
+    {
+      "path": "sources/tests-v8/turn-rules.test.ts.txt",
+      "bytes": 2470,
+      "sha256": "d33c4261ae59884ed97104e12f4e8c514124567190ffc379bf3a605f0129e18b"
+    },
+    {
+      "path": "sources/tests-v8/update.test.ts.txt",
+      "bytes": 7834,
+      "sha256": "e5eca63f8e6a1deeafa1b3b344d7d4c253d02a599efae14cccc91e57c51bdb0b"
+    },
+    {
+      "path": "sources/turn-rules-v8.md",
+      "bytes": 709,
+      "sha256": "29acba53cd8c4866d8596ec52b31aa349c96f2504affb18cd833ac84581d4d26"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 26503,
+      "sha256": "926a17f882a221ee94d309bc729f200aba0989276dc3e9aa267de1b4a3193e79"
+    },
+    {
+      "path": "src/content.ts",
+      "bytes": 3781,
+      "sha256": "775b94c105d083eb37428af66ceba4002f7296455cb268a09c9db26e7556fc95"
+    },
+    {
+      "path": "src/data/config.ts",
+      "bytes": 480,
+      "sha256": "e29f35de5d59d17f55ae253dd0c08e5eaeb9b5114b637c9423d10becb6831a2f"
+    },
+    {
+      "path": "src/data/hero-snapshot.json",
+      "bytes": 11408,
+      "sha256": "c3f053b22e90a10e76ad19adae76dd9de45e6923d193fcb0c994750886e1af29"
+    },
+    {
+      "path": "src/data/tactics.json",
+      "bytes": 18996,
+      "sha256": "d2c9b74757e91eaf6644fb330e66950a29fd4d3150b0f23000461fea67beea6a"
+    },
+    {
+      "path": "src/engine.ts",
+      "bytes": 37640,
+      "sha256": "11bbfef271b49cb4b2cb1ccd4aa417f196e4459576cd63bc0c5a056214117dba"
+    },
+    {
+      "path": "src/icons.tsx",
+      "bytes": 3958,
+      "sha256": "af2a306f182cc8b393d17944c155c84937aa3fd8da63718239afa7e6e16858ea"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 204,
+      "sha256": "80d440080e2a573ee732ee95b27def52ba9a0d85ef9f5544026982c682bd5a23"
+    },
+    {
+      "path": "src/simulation-ui.tsx",
+      "bytes": 3636,
+      "sha256": "2177eecef1c44ae65c7c4895c3da4efde3e5ca2686842eebd8ffe41c2bc2a97c"
+    },
+    {
+      "path": "src/simulation.ts",
+      "bytes": 2698,
+      "sha256": "ef986037f3f9f9b7aacf5150c4c860381e4eb402b8ccc3494cc48c040b79fe93"
+    },
+    {
+      "path": "src/simulation.worker.ts",
+      "bytes": 368,
+      "sha256": "a380788aee294cec1230aea3a193edab33ffd17fe049bcf8635c6dfbbc1d38e5"
+    },
+    {
+      "path": "src/sound.ts",
+      "bytes": 635,
+      "sha256": "ec127850cbd4940f0e63fa0a9c958a88a05dbe543970ac4c524f7744f8a32c94"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 10331,
+      "sha256": "ee6ddebff0665f5534bc7777de0051c0616229caf64c7d9938bf66afe36f2e27"
+    },
+    {
+      "path": "src/update.css",
+      "bytes": 8827,
+      "sha256": "a8ea64d0f731a19724f993ffafe60359d96886dcb7e8b7453a326a4f0d14b719"
+    },
+    {
+      "path": "tests/current.test.ts",
+      "bytes": 23334,
+      "sha256": "ffa9e3bbff8e622a86e2aa67eeedfdf3955acd0b83fc46903b1c25a2b98cd75f"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 521,
+      "sha256": "7c2b571e497ac41ba36b92a25b7fc412bb840b2fffa4194851354092e86adb81"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 299,
+      "sha256": "fcab7fd8efb287ca5b998cb5bbd7e9acb3cbc8623808ebc67c4a59c829d28c67"
     }
   ]
 }

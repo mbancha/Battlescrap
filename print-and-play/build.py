@@ -27,7 +27,7 @@ def array(name):
 heroes=[dict(zip(['id','name','job','secondary','region','move','defense','attack','range','cost','ability','text'],h)) for h in array('heroes')]
 cards=[dict(zip(['id','name','cost','effect','suit','text'],h)) for h in array('cards')]
 objectives=array('objectives'); H={h['id']:h for h in heroes}
-arts={h['id']:next((GAME/'public/heroes-v7').glob(h['id']+'-*.png')) for h in heroes}
+arts={h['id']:next((GAME/'public/heroes-current').glob(h['id']+'-*.png')) for h in heroes}
 INK=HexColor('#283c3b'); IVORY=HexColor('#ffffff'); GOLD=HexColor('#b58138'); LINE=HexColor('#aca99c')
 COLORS={'Fire':'#bd542d','Lightning':'#906b15','Water':'#28768e','boost':'#44784c','daze':'#a46d24','stunned':'#81578f','heart':'#a44a45'}
 REGIONS={'Windlands':'#a15d3b','Highholm':'#537a88','Cinder’s Rim':'#ac5439','Timberwood':'#58734e','Port Cutlass':'#327c85'}
