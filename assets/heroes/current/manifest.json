@@ -1,0 +1,132 @@
+{
+  "colors": {
+    "Striker": "dusty crimson rose #B85C65",
+    "Guard": "warm ochre gold #BE9650",
+    "Controller": "muted teal #4C9697",
+    "Support": "sage green #829C72",
+    "Scout": "slate sky blue #739BC4"
+  },
+  "portraits": [
+    {
+      "name": "h01-bisti-grasshade",
+      "primary": "Striker",
+      "secondary": "Scout",
+      "region": "Windlands, sparse wisps of tall grass",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-d98f897a-8ecf-4f88-9d0e-ffb01ddb3157.png",
+      "sha256": "7848ddaf18eadf29d76e456634033f6920d787aa9d102ff727ad28d647abee79"
+    },
+    {
+      "name": "h02-brynja-stonehide",
+      "primary": "Guard",
+      "secondary": "Support",
+      "region": "Highholm, misty broken mountain contours",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-bb931532-617b-41e3-ad4a-1c12b022afb6.png",
+      "sha256": "6b7cd1260e363aea86d86a3d29ea79d8ab20a5bad4e348f109133e85116b6045"
+    },
+    {
+      "name": "h03-voru-cinderveil",
+      "primary": "Controller",
+      "secondary": "Striker",
+      "region": "Cinder's Rim, smoky volcanic ash",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-ad6076ef-99b1-437f-948e-6adfbda58461.png",
+      "sha256": "923c3344671943b6e6608f888f839c350fd59218b5b2bef10b5a0713a684ff39"
+    },
+    {
+      "name": "h04-tavi-sailwhistle",
+      "primary": "Scout",
+      "secondary": "Support",
+      "region": "Port Cutlass, soft sea breeze and tidal traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-f0a78440-a8a7-4b33-8c60-beff3c3416e5.png",
+      "sha256": "a3b695ab740302733774a46adc8c1df472ca18a6a03ff980949965b216423827"
+    },
+    {
+      "name": "h05-marda-oakweaver",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Timberwood, vague leaf and woodgrain traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-12ffdfc6-c3a3-4875-a963-91995a7b3248.png",
+      "sha256": "d37f09adce528aba69301638f65bfcae1fcfd441d083f97611dae0d11780c27c"
+    },
+    {
+      "name": "h06-niala-grassveil",
+      "primary": "Controller",
+      "secondary": "Support",
+      "region": "Windlands, tall grass wisps",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-8c517f8d-039c-425d-a8ed-9cac00ef724c.png",
+      "sha256": "75ce8d8f458318e2906cae79fad514d95a43aeaa7c705aff581cf5db86a0e8a9"
+    },
+    {
+      "name": "h07-eirik-hearthkeeper",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Highholm, misty mountain contours",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-018a9b2e-33cd-45df-9e4b-5cfeac90e0c7.png",
+      "sha256": "f9d4580964fafc5d0729b146b569f8ba5604cfb1c15bc2a03af8fa78d9902eff"
+    },
+    {
+      "name": "h08-ketu-ashheart",
+      "primary": "Striker",
+      "secondary": "Controller",
+      "region": "Cinder's Rim, drifting ash and weathered stone",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-58ac21bb-e54c-4e5c-91e1-da72ed4f0ab9.png",
+      "sha256": "ce591d31c9c9414bab0790a394c0cc40e70ac9aa022a2742111abe2392ab4c71"
+    },
+    {
+      "name": "h09-ren-timberwright",
+      "primary": "Scout",
+      "secondary": "Guard",
+      "region": "Timberwood, faint woodgrain and leaves",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-00f8b205-b2fe-45de-b798-629840d6dfbe.png",
+      "sha256": "4491d5b0202a80f60aabce572ca5093fe64622889ef92b87e69691c2dbed6a1f"
+    },
+    {
+      "name": "h10-orro-stormanchor",
+      "primary": "Guard",
+      "secondary": "Controller",
+      "region": "Port Cutlass, tidal water and sea mist",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-a38073a3-154b-4eaf-9992-01b899e61574.png",
+      "sha256": "2de0b2798634860ae8f80e98d6657cb1d731fc746610b51d64e944edd17529e1"
+    },
+    {
+      "name": "h11-hester-wellward",
+      "primary": "Guard",
+      "secondary": "Support",
+      "region": "Wellington, faint stone and soft circular well-water blooms",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-58b29899-120c-4420-850b-ae5c9aeedd4c.png",
+      "sha256": "d4698ce6e49cb5bd87910b3bc209b5fa1cea3651c66a7fc8b55a4f2b1f68ca1b"
+    },
+    {
+      "name": "h12-perrin-lastdrop",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Wellington, faint stone and well-water blooms",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-7756fa30-ca79-4c4b-b81d-16f42689195f.png",
+      "sha256": "d5c9e320bea6a7339855a99a61991bef167a641fd632b3613d8ca5cbb92a2a5b"
+    },
+    {
+      "name": "h13-demea-lastbanner",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Phalexia, faint weathered stone and windblown banner traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-1632a3df-97f1-4475-a7af-cddc4a2d9c28.png",
+      "sha256": "1b289a6f7df28ccc81bc929c98b36171c90634aec4a9fa3fe99418ab2a63cddc"
+    },
+    {
+      "name": "h14-ilex-marchstep",
+      "primary": "Scout",
+      "secondary": "Guard",
+      "region": "Phalexia, weathered stone and windblown banner traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-c290bb41-aa19-4a4c-b312-cf7d5a61a7fc.png",
+      "sha256": "8f31059856f54c665262d5b86cceaca5093bd79c639d505a1ea9c3f67f4cd4c6"
+    },
+    {
+      "name": "h15-kalawi-bloodmane",
+      "primary": "Striker",
+      "secondary": "Scout",
+      "region": "Windlands, sparse tall grass wisps",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-10c4a56d-b0f8-45aa-8cb5-a29d4ead2616.png",
+      "sha256": "2cbffd88967b5c8ec017ede1299a21d5cc4f18921731adbef4d0e12b094716b2"
+    }
+  ],
+  "version": "class-watercolor-2026-11-02"
+}

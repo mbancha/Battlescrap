@@ -1,3 +1,7 @@
+[Play Battlescrap](https://mbancha.github.io/Battlescrap/) · [Character gallery](assets/heroes/index.html)
+
+Standalone repository with Battlescrap history extracted from BG-Prototypes. Current portraits use the class-color watercolor direction in the live Design Draft. Primary class is on the left, subclass on the right. Kalawi's Striker/Scout art pairing is provisional because his current class fields are blank.
+
 # Battlescrap
 A local tabletop skirmish prototype using **shared-elements-v15**. Play Three Fires with three heroes per faction, or the four-hero shared-faction team test.
 
@@ -27,3 +31,4 @@ npm.cmd run smoke
 Browser checks use installed Chrome by default; set CHROMIUM_PATH for another Chromium executable. Evidence and limits are in [VERIFICATION.md](VERIFICATION.md). Tests establish specified behavior, not balance.
 
 Bisti’s dedicated current portrait is included. Incomplete regional heroes are unavailable. Team mode shares faction resources and control; separate networked seats and campaign travel/recruitment offers are future work. Existing print kit PDFs retain their historical rules and are not the current digital reference.
+

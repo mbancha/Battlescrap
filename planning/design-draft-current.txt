@@ -1,3 +1,4 @@
+Tab 1
 Battlescrap — Design Draft
 Current design · shared-elements-v15 design update · 30 October 2026. CONFIRMED reflects designer instructions; TEST identifies adjustable playtest rulings; OPEN remains future design.
 Companion: https://docs.google.com/document/d/16-weAaDa4W7e4gC2jeiv_NN0cSAS_bcd_WATxPcDSAU
@@ -114,8 +115,22 @@ Fly: voluntary movement may ignore intervening units and terrain effects, except
 Push (x)/Pull (x): on a hit, optionally Push/Pull the surviving target up to x legal spaces.
 Poison (x): on a hit, apply x Poison.
 Printed tactics and ability payments are exclusive uses of one discarded card. Cancel interrupts a tactic before its effect resolves. Cancel also interrupts a tactic discarded to activate a hero ability and prevents that ability from resolving, discarding the cancelled card. Cancel may answer an opponent’s Cancel. The counterattack is one legal retaliation against the original attacker on a miss, without AP, with ordinary range/responses; it cannot chain or multiply through repeated copies.
+Character art direction — 1 November 2026
+Baseline: the designer’s attached Kalawi Bloodmane sketch and the “Explore distinctive minimalist art” studies. Use the supplied image’s level of finish: a detailed character drawn with deliberately rough, visibly handmade marks. The earlier progressively rougher studies provide context; the attached image sets the actual production baseline.
+Medium and mark-making: graphite and charcoal construction lines beneath broken fine ink, translucent watercolor-like washes and scumbled, dry-brush gouache. Use variable line weight, searching contours, short hatching, scratch marks and occasional stray strokes beyond the silhouette. Let pale paper interrupt edges and pigment. Keep texture irregular and tied to material; avoid a uniform distress filter.
+Form and detail: readable, slightly exaggerated fantasy anatomy built from angular planes and broad shadow masses. Faces, hands, characteristic hair and signature equipment receive the sharpest detail. Cloth, fur, grass, rope, wood and battered metal remain tactile through economical marks: frayed fibers, split grain, chipped paint and dull corrosion. Secondary edges may dissolve into sketch lines. Preserve each character’s species, facial identity, proportions, clothing, equipment and original pose.
+Color: earthy, matte and varied within each character. Ochre, umber, straw, bone, olive, charcoal, dusty teal and weathered blue support restrained crimson or ember accents. Retain natural hue and value variation across surfaces; this is a full-color illustration, never a two-tone treatment. The red mane can remain the strongest Bloodmane accent, balanced by subdued grass and brown anatomy. Avoid neon, highly saturated large areas, glossy highlights, smooth airbrushed modeling and polished comic-style cel shading.
+Background: nearly white paper with a very faint color tinge and subtle fine grain. Pale yellow is the Bloodmane baseline; seafoam, sage, cool blue, peach or blush may be barely perceptible for other characters. Keep the background lighter and quieter than the figure. No saturated fields, two-color scenery silhouettes, disks, graphic patterns, heavy vignette or competing landscape. A few loose graphite ground strokes can anchor the feet; most surrounding space stays open.
+Composition and mood: one full-body character in the existing stance, with the same facing, gesture, limb arrangement and signature objects. Prioritize the strong silhouette and expressive face for cards and small pieces. The mood is rugged, resourceful, serious fantasy with character-specific warmth or menace. The tactile sketchbook surface and sparse surroundings provide restraint while the character remains richly identifiable.
+Consistency and reuse: apply the same line behavior, paper texture, matte color handling and selective finish across the whole cast. Keep text, game icons, faction ownership and assigned elements outside the art. Reuse one identity-correct master across prototype views, cards and pieces; layout and crop metadata remain separate. Replace superseded character images rather than retaining alternate art libraries.
+Identity and completion: Kalawi Bloodmane is current hero h15; his earlier h01 filename is a legacy print/runtime identity and must never identify Bisti Grasshade h01. Fourteen locally available characters were regenerated in this direction. Bisti’s latest source portrait was referenced in the prototype notes but is absent from this computer and the checked handoff branch; her style transfer still requires that source so her existing identity and pose can be preserved.
+
+Class-color watercolor portrait backgrounds — 2 November 2026
+Striker uses dusty crimson rose (#B85C65), Guard warm ochre (#BE9650), Controller muted teal (#4C9697), Support sage green (#829C72), and Scout slate sky blue (#739BC4). The viewer’s left half carries the primary class color and right half the subclass color, diluted to faint watercolor on near-white ivory paper. Use irregular splotches, granulation, soft blooms and an organic meeting at the center. Keep both sides legible without hard graphic panels. Subtle regional traces suggest grass in Windlands, mountain mist in Highholm, ash in Cinder’s Rim, foliage/woodgrain in Timberwood, sea mist in Port Cutlass, well-water/stone in Wellington, and weathered stone/banner movement in Phalexia. Preserve the existing character, pose, face, clothing, gear and sketchbook rendering. This replaces the earlier single-tint background rule and prohibition on two color families; saturated flat two-tone backgrounds remain excluded. Kalawi’s background uses his established Striker/Scout art pairing provisionally because current regional class fields are blank. Bisti’s source has been recovered and her portrait is included. All new games using BG-Prototypes architecture must start in their own repository, copying and adapting relevant architecture and guidance; each game owns its source, assets, tests and playable deployment.
 
 
+
+Rules Quick Sheet
 Battlescrap — Rules Quick Sheet
 shared-elements-v15 design update · 30 October 2026 · TEST defaults are adjustable. Full rules and lore are in the main Design Draft tab; hero-specific wording is in the live Battlescrap sheet.
 Setup and turn
@@ -141,6 +156,8 @@ Objectives: follow the condition printed on your card. Only held, eligible objec
 Brightstone: only heroes collect; Recruits cannot collect by any method. Each pickup draws one tactic; each secured stone pays 2 RP at settlement. Hero defeat drops one stone, draws one tactic for owner and moves its card to bottom. Recruit defeat does neither. Secured stones never drop again.
 
 
+
+Scenarios
 Battlescrap — Scenarios
 Three Fires
 Each scenario uses a map plus its own deployment/spawning edges, special rules, VP sources and victory threshold or explicit VP payout. A map can support multiple scenarios and multiple group spawning edges; scenario rules specify which are active. No map-specific victory condition is inferred from artwork.
@@ -156,3 +173,5 @@ After the first scenario, roll a d6 once at scenario setup, after revealing trap
 4 Snow: ordinary Move allowance is reduced by {hex:1}, minimum zero; fixed ability/tactic movement is unchanged (TEST).
 5 Heat: gaining Enraged from zero adds exactly 1 extra; no recursion.
 6 Moonfall: at setup add one Brightstone to a random legal full adjacent hex per trap; stones may stack.
+
+
