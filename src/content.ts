@@ -29,4 +29,5 @@ for(let col=0;col<=14;col++)for(let row=0;row<=10;row++){
 export const board={hexes,controls:['3,3','10,3','7,5'],xs:['1,2','5,3','8,4','4,5','10,5','12,4','13,2','12,6','9,6'],stones:[] as string[],walls:[] as string[]};
 export const B:Record<string,any>=Object.fromEntries(hexes.map(h=>[h.id,h]));
 export function distance(a:string,b:string){if(!B[a]||!B[b])return Infinity;const q=B[a].q-B[b].q,r=B[a].r-B[b].r;return (Math.abs(q)+Math.abs(r)+Math.abs(q+r))/2;}
-export const portraitPaths:Record<string,string>=Object.fromEntries(heroes.map(h=>[h.id,h.id==='h01'||Number(h.id.slice(1))>=11?'./heroes-current/'+h.id+'-'+h.name.toLowerCase().replaceAll(' ','-')+'.png':'./heroes-v7/'+h.id+'-'+h.name.toLowerCase().replaceAll(' ','-')+'.png']));
+export const portraitPaths:Record<string,string>=Object.fromEntries(heroes.map(h=>[h.id,'./heroes-current/'+h.id+'-'+h.name.toLowerCase().replaceAll(' ','-')+'.png']));
+

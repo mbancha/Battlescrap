@@ -1,0 +1,116 @@
+{
+  "colors": {
+    "Striker": "dusty crimson rose #B85C65",
+    "Guard": "warm ochre gold #BE9650",
+    "Controller": "muted teal #4C9697",
+    "Support": "sage green #829C72",
+    "Scout": "slate sky blue #739BC4"
+  },
+  "portraits": [
+    {
+      "name": "h01-bisti-grasshade",
+      "primary": "Striker",
+      "secondary": "Scout",
+      "region": "Windlands, sparse wisps of tall grass",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-d98f897a-8ecf-4f88-9d0e-ffb01ddb3157.png"
+    },
+    {
+      "name": "h02-brynja-stonehide",
+      "primary": "Guard",
+      "secondary": "Support",
+      "region": "Highholm, misty broken mountain contours",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-bb931532-617b-41e3-ad4a-1c12b022afb6.png"
+    },
+    {
+      "name": "h03-voru-cinderveil",
+      "primary": "Controller",
+      "secondary": "Striker",
+      "region": "Cinder's Rim, smoky volcanic ash",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-ad6076ef-99b1-437f-948e-6adfbda58461.png"
+    },
+    {
+      "name": "h04-tavi-sailwhistle",
+      "primary": "Scout",
+      "secondary": "Support",
+      "region": "Port Cutlass, soft sea breeze and tidal traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-f0a78440-a8a7-4b33-8c60-beff3c3416e5.png"
+    },
+    {
+      "name": "h05-marda-oakweaver",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Timberwood, vague leaf and woodgrain traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-12ffdfc6-c3a3-4875-a963-91995a7b3248.png"
+    },
+    {
+      "name": "h06-niala-grassveil",
+      "primary": "Controller",
+      "secondary": "Support",
+      "region": "Windlands, tall grass wisps",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-8c517f8d-039c-425d-a8ed-9cac00ef724c.png"
+    },
+    {
+      "name": "h07-eirik-hearthkeeper",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Highholm, misty mountain contours",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-018a9b2e-33cd-45df-9e4b-5cfeac90e0c7.png"
+    },
+    {
+      "name": "h08-ketu-ashheart",
+      "primary": "Striker",
+      "secondary": "Controller",
+      "region": "Cinder's Rim, drifting ash and weathered stone",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-58ac21bb-e54c-4e5c-91e1-da72ed4f0ab9.png"
+    },
+    {
+      "name": "h09-ren-timberwright",
+      "primary": "Scout",
+      "secondary": "Guard",
+      "region": "Timberwood, faint woodgrain and leaves",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-00f8b205-b2fe-45de-b798-629840d6dfbe.png"
+    },
+    {
+      "name": "h10-orro-stormanchor",
+      "primary": "Guard",
+      "secondary": "Controller",
+      "region": "Port Cutlass, tidal water and sea mist",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-a38073a3-154b-4eaf-9992-01b899e61574.png"
+    },
+    {
+      "name": "h11-hester-wellward",
+      "primary": "Guard",
+      "secondary": "Support",
+      "region": "Wellington, faint stone and soft circular well-water blooms",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-58b29899-120c-4420-850b-ae5c9aeedd4c.png"
+    },
+    {
+      "name": "h12-perrin-lastdrop",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Wellington, faint stone and well-water blooms",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-7756fa30-ca79-4c4b-b81d-16f42689195f.png"
+    },
+    {
+      "name": "h13-demea-lastbanner",
+      "primary": "Support",
+      "secondary": "Guard",
+      "region": "Phalexia, faint weathered stone and windblown banner traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-1632a3df-97f1-4475-a7af-cddc4a2d9c28.png"
+    },
+    {
+      "name": "h14-ilex-marchstep",
+      "primary": "Scout",
+      "secondary": "Guard",
+      "region": "Phalexia, weathered stone and windblown banner traces",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-c290bb41-aa19-4a4c-b312-cf7d5a61a7fc.png"
+    },
+    {
+      "name": "h15-kalawi-bloodmane",
+      "primary": "Striker",
+      "secondary": "Scout",
+      "region": "Windlands, sparse tall grass wisps",
+      "source": "C:\\Users\\mbahn\\.codex\\generated_images\\01a19ac5-9935-7df3-b0d8-10b3148188cd\\exec-10c4a56d-b0f8-45aa-8cb5-a29d4ead2616.png"
+    }
+  ]
+}
