@@ -1,5 +1,5 @@
 # Battlescrap continuation
-Read START-HERE.md, the repository AGENTS.md and prototyping skill. Current implementation is **shared-elements-v15**, schema 2.
+Read START-HERE.md, ARCHITECTURE.md, SOURCE_AUDIT.md and DECISIONS.md. This is the dedicated Battlescrap repository. Every new game must start in its own repository, copying and adapting relevant BG-Prototypes architecture. Current implementation is **shared-elements-v15**, schema 2.
 
 The live Battlescrap spreadsheet is authoritative for hero identities, stats, costs, effects, availability and regional wording. Read Heroes, Regions and the card-content tabs before coding and before delivery. Match stable IDs and header names, preserve designer edits, and capture a versioned implementation snapshot. Flag conflicting sheet entries instead of silently substituting old values.
 
@@ -10,3 +10,4 @@ Keep games standalone. State and RNG must serialize; UI, tests and bots share au
 Label provisional rulings TEST and unfinished design OPEN. Ask numbered questions before substantial ambiguous rule changes unless the user has already authorized defaults. Preserve approved art and incomplete regional entries; do not present historical print PDFs as current. Do not publish publicly without scope.
 
 Run tests/build, assets, simulation and current browser acceptance after relevant code changes. Record actual evidence and limits; tests do not certify balance or total absence of defects.
+

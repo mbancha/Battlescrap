@@ -1,10 +1,13 @@
-# Resume Battlescrap
-Use this checkout’s `codex/battlescrap-laptop-handoff` branch. The implemented content/save version is **shared-elements-v15**, schema **2**.
+# Battlescrap
 
-Read [README.md](README.md) for running and playing, then [ARCHITECTURE.md](ARCHITECTURE.md), [DECISIONS.md](DECISIONS.md) and [VERIFICATION.md](VERIFICATION.md) before changing rules.
+[Play Battlescrap](https://mbancha.github.io/Battlescrap/) · [Repository](https://github.com/mbancha/Battlescrap)
 
-The live [Design Draft](https://docs.google.com/document/d/1PlwHc5BWQdSv77xgSlSmNEiZIhgJ40cii22NKibvcFM) owns general rules, its **Rules Quick Sheet** tab is the player reference, the [spreadsheet](https://docs.google.com/spreadsheets/d/1hfWFhxm-Su-qtR_hVrzFt6GBW1ure8W4xmp1o8hF-Rg/edit) owns hero data, and the [Build Specification](https://docs.google.com/document/d/16-weAaDa4W7e4gC2jeiv_NN0cSAS_bcd_WATxPcDSAU) owns implementation requirements. Read Heroes, Regions and the card-content tabs before coding and before delivery. Match stable IDs and headers; never restore stale hero values from old exports or code.
+This standalone repository contains shared-elements-v15, current character art, tests and historical print sources. Its history was extracted from BG-Prototypes.
 
-Keep approved visual masters under `assets/`; browser copies are under `public/`. Bisti has her dedicated current portrait. Earlier implementations and tests under `sources/` are historical material, not alternate current rules. Print PDFs are also historical and must not be presented as the current quick sheet.
+Clone this repository and run npm ci, then npm run dev -- --host 127.0.0.1 from its root folder. Open the local address printed by Vite. On Windows, npm.cmd may be needed.
 
-The local game requires no other game or root install. No public deployment is implied by updating this branch.
+The live Design Draft owns rules and art direction. The Build Specification owns digital instructions. The Battlescrap sheet owns character data. Their links are in README.md. Read live sources before content changes. Keep Google files in the existing game Drive folder.
+
+Current masters and class-color metadata are in assets/heroes/current. Browser copies are in public/heroes-current. All fifteen characters have current art. Kalawi uses a provisional Striker/Scout art pairing because his regional class fields are blank.
+
+Run npm test, npm run build, npm run assets, npm run sim and npm run smoke for relevant checks. Browser checks use installed Chrome or CHROMIUM_PATH. GitHub Actions publishes main to Pages. VERIFICATION.md records evidence and limitations. Existing print PDFs are historical revisions.

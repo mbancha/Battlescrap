@@ -18,8 +18,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 1807,
-      "sha256": "60588897bcd32f7c6f7b502d4711922c163f0d51a57482fda55fd36b776767f6"
+      "bytes": 1965,
+      "sha256": "3525df279f2b6e826c69fde69062e7e7b348153b492e77780be1405461745e88"
     },
     {
       "path": "ARCHITECTURE.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 1399,
-      "sha256": "20740218d89c06310ffa4fef4b7d3f7ee4024ec5e84a497ad3287036c6d07e01"
+      "bytes": 1281,
+      "sha256": "8382521afcc2c5f296876558fa4f1046b5f1eda1e42d4c3f5538f85849071649"
     },
     {
       "path": "VERIFICATION.md",
