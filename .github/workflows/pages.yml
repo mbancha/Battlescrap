@@ -1,4 +1,4 @@
-name: Build and publish Battlescrap
+name: Build and publish Moonfall Tactics
 on:
   push:
     branches: [main]

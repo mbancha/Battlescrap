@@ -1,6 +1,6 @@
 {
-  "id": "battlescrap",
-  "title": "Battlescrap — Three Fires",
+  "id": "moonfall-tactics",
+  "title": "Moonfall Tactics — Three Fires",
   "scope": "turn-rules-v8: alternating shuffled queue, individual recruit actions, corrected objective/pickup/death rewards",
   "maturity": "human playable",
   "target": "playtest release",

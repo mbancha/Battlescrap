@@ -1,8 +1,8 @@
-[Play Battlescrap](https://mbancha.github.io/Battlescrap/) · [Character gallery](assets/heroes/index.html)
+[Play Moonfall Tactics](https://mbancha.github.io/Moonfall-Tactics/) · [Character gallery](assets/heroes/index.html)
 
-Standalone repository with Battlescrap history extracted from BG-Prototypes. Current portraits use the class-color watercolor direction in the live Design Draft. Primary class is on the left, subclass on the right. Kalawi's Striker/Scout art pairing is provisional because his current class fields are blank.
+Standalone repository with Moonfall Tactics history extracted from BG-Prototypes. Current portraits use the class-color watercolor direction in the live Design Draft. Primary class is on the left, subclass on the right. Kalawi's Striker/Scout art pairing is provisional because his current class fields are blank.
 
-# Battlescrap
+# Moonfall Tactics
 A local tabletop skirmish prototype using **shared-elements-v15**. Play Three Fires with three heroes per faction, or the four-hero shared-faction team test.
 
 ## Run
