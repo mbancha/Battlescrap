@@ -16,3 +16,5 @@
 .alt-card>.element{display:flex;width:110px;height:110px;margin:0 auto 12px}.alt-card>.element svg{width:96px;height:96px}
 
 .queue-card{grid-template-rows:38px 26px;gap:0!important}.queue-card>.portrait{grid-row:1;grid-column:1;height:36px!important}.queue-card>b{grid-row:1;grid-column:2;margin:0}.queue-card>.element{grid-row:2;grid-column:1}.queue-card>.health{grid-row:2;grid-column:2;margin:0}.track-reward{height:22px}.queue-card .health b{font-size:12px}
+
+.roll-bar{touch-action:none;width:100%;min-height:44px;background:linear-gradient(90deg,#433626,#987744);cursor:ew-resize}.prompt{font-size:.85rem;padding:.5rem}aside details[open]{max-height:360px;overflow:auto}

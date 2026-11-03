@@ -137,9 +137,9 @@ export function legalActions(s:State):Action[]{const p=s.players[s.side],out:Act
  if(s.phase==='deploy'){const u=s.units.find((u:any)=>u.owner===s.side&&!u.hex);if(u)spawn(s,s.side).forEach(hex=>add({type:'deploy',unit:u.id,hex}));return out;}
  if(s.phase==='results'){add({type:'nextResults'});return out;}
  if(s.phase!=='battle')return out;
- if(s.response){add({type:'passCancel'});const top=s.response.stack[s.response.stack.length-1];if(top.owner!==who)cancelCards(s,who).forEach(card=>add({type:'cancel',card}));return out;}
+ if(s.response){add({type:'passCancel'});if(s.combat){const attacking=unit(s,s.combat.attacker).owner===who;for(const card of x.hand){const e=C[card.split(':')[0]].effect;if(e===(attacking?'attack':'defense')||(attacking&&e==='damage')||(!attacking&&e==='counter'&&!s.combat.isCounter&&!s.combat.counter))add({type:'response',card});}}const top=s.response.stack[s.response.stack.length-1];if(top.owner!==who)cancelCards(s,who).forEach(card=>add({type:'cancel',card}));return out;}
  if(s.combat){const c=s.combat;if(c.stage==='response'){add({type:'pass'});const attacking=unit(s,c.attacker).owner===who;for(const card of x.hand){const e=C[card.split(':')[0]].effect;if(e===(attacking?'attack':'defense')||(attacking&&e==='damage')||(!attacking&&e==='counter'&&!c.isCounter&&!c.counter))add({type:'response',card});}}
- if(c.stage==='reroll'){add({type:'resolve'});if(x.pp>=2)c.attackDice.forEach((_:any,die:number)=>add({type:'reroll',die}));}if(c.stage==='counter'){add({type:'declineCounter'});if(attackTargets(s,unit(s,c.defender)).some((t:any)=>t.id===c.attacker))add({type:'counterAttack'});}return out;}
+ if(c.stage==='roll'){add({type:'roll'});}if(c.stage==='reroll'){add({type:'resolve'});if(x.pp>=2)c.attackDice.forEach((_:any,die:number)=>add({type:'reroll',die}));}if(c.stage==='counter'){add({type:'declineCounter'});if(attackTargets(s,unit(s,c.defender)).some((t:any)=>t.id===c.attacker))add({type:'counterAttack'});}return out;}
  if(s.pending)return pendingActions(s);
  if(!s.active){s.queue.filter((id:string)=>unit(s,id).owner===s.side).forEach((id:string)=>add({type:'activate',unit:id}));return out;}
  add({type:'end'});for(const u of s.units.filter((u:any)=>u.owner===s.side&&(u.id===s.active||!u.hero))){if(!u.hex){if(affordable(s,u,cost(s,u,'respawn')))spawn(s,s.side).forEach(hex=>add({type:'respawn',unit:u.id,hex}));continue;}
@@ -154,7 +154,7 @@ export function legalActions(s:State):Action[]{const p=s.players[s.side],out:Act
 export const actions=legalActions;
 function same(a:Action,b:Action){return JSON.stringify(a)===JSON.stringify(b);}
 export function applyAction(state:State,a:Action):string|null{const s=clone(state);try{if(a.type==='selection'){if(!['unit','tool','card'].includes(a.kind))return 'Invalid selection';}else if(a.type==='bid'){if(s.phase!=='bid'||!['stone','blue'].includes(a.zone)||!Number.isSafeInteger(a.amount)||a.amount%2||a.amount<(s.round>1?2:0)||(s.round>1&&a.zone!==s.zones[s.side]))return 'Use whole nonnegative PP, and positive increments for a tied bid.';}else if(!legalActions(s).some(b=>same(a,b)))return 'That action is unavailable.';
- execute(s,a);checkVictory(s);pump(s);s.botRoll=rand(s);s.history.push(clone(a));Object.assign(state,s);return null;}catch(e){return 'Action rejected: '+String(e);}}
+ const actor=owner(s);s.log.push(s.players[actor].name+' · '+a.type+' '+Object.entries(a).filter(([k])=>k!=='type'&&a.type!=='bid'&&a.type!=='selection').map(([k,v])=>k+'='+String(v)).join(' '));execute(s,a);checkVictory(s);pump(s);let forced=legalActions(s);while(forced.length===1&&['pass','passCancel'].includes(forced[0].type)){execute(s,forced[0]);forced=legalActions(s);}s.botRoll=rand(s);s.history.push(clone(a));Object.assign(state,s);return null;}catch(e){return 'Action rejected: '+String(e);}}
 export const dispatch=applyAction;
 function execute(s:State,a:Action){const p=s.players[s.side],who=owner(s);switch(a.type){
  case 'selection':break;
@@ -174,11 +174,12 @@ function execute(s:State,a:Action){const p=s.players[s.side],who=owner(s);switch
  case 'attack':pay(s,unit(s,a.unit),'attack');beginCombat(s,unit(s,a.unit),unit(s,a.target));break;
  case 'grab':pay(s,unit(s,a.unit),'grab');pickup(s,unit(s,a.unit));break;
  case 'respawn':{const u=unit(s,a.unit);pay(s,u,'respawn');Object.assign(u,{hex:a.hex,wounds:0,focus:0,enraged:0,fortified:0,daze:0,poison:0,tokens:{},turnBuff:false});break;}
- case 'ability':pay(s,unit(s,a.unit),'ability');discard(s,s.side,a.card);p.apDiscards++;openResponse(s,s.side,{kind:'ability',unit:a.unit});break;
- case 'card':case 'response':discard(s,who,a.card);s.players[who].printedEffects++;openResponse(s,who,{kind:'tactic',card:a.card});s.response.baseOwner=who;break;
+ case 'ability':pay(s,unit(s,a.unit),'ability');discard(s,s.side,a.card);p.apDiscards++;activateAbility(s,a.unit);break;
+ case 'card':case 'response':if(s.response)resolveResponse(s);discard(s,who,a.card);s.players[who].printedEffects++;openResponse(s,who,{kind:'tactic',card:a.card});s.response.baseOwner=who;if(!s.combat)resolveResponse(s);break;
  case 'cancel':discard(s,who,a.card);s.response.stack.push({kind:'cancel',owner:who,cancelled:false});s.response.priority=1-who;s.response.passes=0;break;
- case 'passCancel':s.response.passes++;s.response.priority=1-who;if(s.response.passes===2)resolveResponse(s);break;
- case 'pass':s.combat.passes++;s.combat.priority=1-who;if(s.combat.passes===2)roll(s);break;
+ case 'passCancel':resolveResponse(s);if(s.combat?.stage==='response'){s.combat.priority=who;s.combat.passes=0;execute(s,{type:'pass'});}break;
+ case 'pass':s.combat.passes++;s.combat.priority=1-who;if(s.combat.passes===2)s.combat.stage='roll';break;
+ case 'roll':roll(s);break;
  case 'resolve':resolveCombat(s);break;
  case 'reroll':s.players[who].pp-=2;s.players[who].rerolls++;s.combat.attackDice[a.die]=s.combat.zeroAttack?Math.min(die(s),die(s)):die(s);s.reveal++;rememberRoll(s);break;
  case 'counterAttack':{const c=s.combat;beginCombat(s,unit(s,c.defender),unit(s,c.attacker),true,null,true);break;}
