@@ -101,25 +101,16 @@ def equipment(c,e,w,h):
     text(c,e['Copies / cost'],w/2,13,10,'Title',True)
 def queue():
     c=pdf('06-action-queue.pdf',True)
-    text(c,'MOONFALL TACTICS',36,564,22,'Title')
-    text(c,'ACTION TRACKS',36,543,10,'Sans',color=LINE)
-    for n,y,label in [(3,408,'2 PLAYERS  /  3 HEROES EACH'),(4,246,'3-4 PLAYERS  /  4 HEROES PER FACTION')]:
-        text(c,label,36,y+88,11,'Title')
-        paper(c,36,y,720,72);border(c,36,y,720,72)
-        values=QUEUE[str(n)];sw=720/len(values)
-        for i,(ap,rap) in enumerate(values):
-            x=36+i*sw
-            if i:
-                c.setStrokeColor(HexColor(LINE));c.setLineWidth(.8);c.line(x,y,x,y+72)
-                c.setFillColor(HexColor(GOLD));p=c.beginPath();p.moveTo(x,y+69);p.lineTo(x-2.5,y+65);p.lineTo(x,y+61);p.lineTo(x+2.5,y+65);p.close();c.drawPath(p,fill=1,stroke=0)
-            text(c,f'{ap} AP',x+sw/2,y+42,17,'Title',True)
-            text(c,f'{rap} RAP',x+sw/2,y+22,12,'Body',True)
-            text(c,str(i),x+sw/2,y+7,6,'Sans',True,color=LINE)
-        text(c,'BOTTOM / 0',36,y-15,8,'Sans');text(c,'TOP / '+str(len(values)-1),728,y-15,8,'Sans',True)
-    para(c,'Print at 100% / Actual size on US Letter, landscape. Each strip is 10 x 1 inches. Cut around the outer rectangle; do not cut the section breaks.',36,173,720,36,10)
-    para(c,'Use one track. Place compact portrait markers below its sections. Read left to right from bottom to top. Capture AP / RAP before moving the chosen hero to slot 0; shift the intervening heroes. Slot 0 is usable.',36,126,720,44,10)
-    text(c,'AP: active hero or friendly Recruits.   RAP: friendly Recruits only.   No tactic draws from the track.',36,58,9,'Sans')
+    for n,top,label in [(3,552,'2 PLAYERS'),(4,318,'3-4 PLAYERS')]:
+        text(c,label,72,top+20,11,'Title')
+        for i,(ap,rap) in enumerate(QUEUE[str(n)]):
+            x=72+(i%3)*216;y=top-72-(i//3)*78
+            paper(c,x,y,216,72);border(c,x,y,216,72)
+            text(c,f'{ap} AP',x+108,y+42,17,'Title',True)
+            text(c,f'{rap} RAP',x+108,y+22,12,'Body',True)
+            text(c,str(i),x+108,y+7,7,'Sans',True,color=LINE)
     c.save()
+
 def tokens():
     c=pdf('04-tokens.pdf');entries=[]
     for key,name in [('focus','Focus'),('enraged','Enraged'),('fortified','Fortified'),('dazed','Dazed'),('poison','Poison')]:entries += [(key,name)]*10
@@ -184,7 +175,7 @@ def main():
     writer=PdfWriter()
     for f in FILES:writer.append(OUT/f)
     writer.write(OUT/'Moonfall-Tactics-print-and-play.pdf')
-    manifest={'date':SOURCE['date'],'files':FILES,'pages':len(writer.pages),'queue_ap_rap':QUEUE,'track_inches':[10,1],'track_page_inches':[11,8.5],'starting_tactics':2,'objective_tactics':1,'heroes':[h['ID'] for h in HEROES],'tactic_cards':len(tactics),'objectives':6,'placements':PLACEMENTS,'source_sha256':hashlib.sha256((ROOT/'source-snapshot.json').read_bytes()).hexdigest()}
+    manifest={'date':SOURCE['date'],'files':FILES,'pages':len(writer.pages),'queue_ap_rap':QUEUE,'section_inches':[3,1],'track_page_inches':[11,8.5],'starting_tactics':2,'objective_tactics':1,'heroes':[h['ID'] for h in HEROES],'tactic_cards':len(tactics),'objectives':6,'placements':PLACEMENTS,'source_sha256':hashlib.sha256((ROOT/'source-snapshot.json').read_bytes()).hexdigest()}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
     doc=pdfium.PdfDocument(str(OUT/'Moonfall-Tactics-print-and-play.pdf'));thumbs=[]
     for i in range(len(doc)):

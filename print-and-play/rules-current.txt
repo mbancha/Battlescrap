@@ -1,5 +1,5 @@
 # Printing and assembly
-Print single-sided on US Letter at 100% / Actual size. The action-track page is landscape; enable automatic page rotation, never Fit to page. Both 10 x 1 inch tracks are on one sheet. Use the six-slot track for 2 players and the eight-slot track for 3-4 players sharing two factions. The top RAP decrease from 3 to 2 is intentional.
+Print single-sided on US Letter at 100% / Actual size. The action-track page is landscape; enable automatic page rotation, never Fit to page. Both multirow 3-inch-section tracks are on one sheet. Use the six-slot track for 2 players and the eight-slot track for 3-4 players sharing two factions. The top RAP decrease from 3 to 2 is intentional.
 Cut card outlines. Hero and tactic cards are 2.5 x 3.5 inches; compact queue portraits are 1.25 x 1.75 inches and fit either track. Put faction/element badges below the portraits after random assignment; mark standee bases with the same element. Use separate hero cards for damage, status and equipment.
 Print all 36 tactics once. Remove the nine cards of the commonly omitted element for 2-player games, leaving 27 in one shared deck. Sleeve cards with opaque backs; do not print the old duplex deck. Six objectives form one shared finite deck. Fold ten hero standees along the dotted center, using the blank foot area for stands. Supply three Recruit pieces per faction, extras if purchased, red damage cubes, two VP markers and dice.
 Trim and join the two map halves along their center seam without scaling. Mount four trap and five starting Moonstone tokens onto the nine identical backs; shuffle and reveal at setup. Remaining Moonstones are the reserve. Print extra tokens if required.
@@ -50,3 +50,4 @@ After the first scenario, roll a d6 once at scenario setup, after revealing trap
 6 Moonfall: at setup add one Moonstone to a random legal full adjacent hex per trap; stones may stack.
 # Campaign (TEST)
 Each secured Moonstone pays 2 RP at settlement; baseline 10 RP and winner +1 RP. Campaign ends at ten wins or a four-win lead. Regional recruitment, travel and catch-up income remain unfinished; this kit supplies the starter scenario, not a complete campaign.
+

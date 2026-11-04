@@ -15,3 +15,5 @@ Print **19 US Letter pages, single-sided, 100% / Actual size**. Enable automatic
 Use compact queue portraits with these strips; the former wide holders do not fit eight across Letter. Place element badges beneath the portraits and match standee-base markings. Supply Recruit pieces (three per faction plus purchased extras), red damage cubes, dice and two VP markers. Opaque sleeves hide card backs. Print more status tokens as required.
 
 The current Cancel cards follow the newer combat-only rule. The live sheet and runtime text still contain older ability-cancellation wording; this discrepancy is recorded in the [Sol plan](../../planning/sol-update-2026-11-04.md). Unfinished regional heroes remain unavailable. Team setup and campaign income remain TEST.
+
+

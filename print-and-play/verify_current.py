@@ -19,14 +19,12 @@ check('Two starting tactics; one objective tactic',m['starting_tactics']==2 and 
 with pdfplumber.open(OUT/'06-action-queue.pdf') as d:
     p=d.pages[0]
     check('One landscape Letter track sheet',len(d.pages)==1 and p.width==792 and p.height==612)
-    strips=[r for r in p.rects if abs(r['width']-720)<.01 and abs(r['height']-72)<.01]
-    check('Both tracks exactly ten by one inches',len(strips)==2)
-    for y,n in [(408,3),(246,4)]:
-        values=m['queue_ap_rap'][str(n)]
-        sw=720/len(values)
-        for i,(ap,rap) in enumerate(values):
-            x=36+i*sw
-            s=p.crop((x,612-y-72,x+sw,612-y)).extract_text()
+    sections=[r for r in p.rects if abs(r['width']-216)<.01 and abs(r['height']-72)<.01]
+    check('Fourteen sections exactly three by one inches',len(sections)==14)
+    for top,n in [(552,3),(318,4)]:
+        for i,(ap,rap) in enumerate(m['queue_ap_rap'][str(n)]):
+            x=72+i%3*216;y=top-72-i//3*78
+            s=p.crop((x,612-y-72,x+216,612-y)).extract_text()
             check(f'{n}-hero slot {i}: {ap} AP / {rap} RAP',f'{ap} AP' in s and f'{rap} RAP' in s)
     check('Six and eight sections',len(m['queue_ap_rap']['3'])==6 and len(m['queue_ap_rap']['4'])==8)
     check('Intentional top RAP drop retained',all(v[-2][1]==3 and v[-1]==[5,2] for v in m['queue_ap_rap'].values()))
