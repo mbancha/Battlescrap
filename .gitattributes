@@ -1,2 +1,5 @@
 # Preserve source exports and asset-manifest hashes on every OS.
 * -text
+*.pdf binary
+*.png binary
+*.webp binary

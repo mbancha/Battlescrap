@@ -30,5 +30,10 @@ npm.cmd run smoke
 ```
 Browser checks use installed Chrome by default; set CHROMIUM_PATH for another Chromium executable. Evidence and limits are in [VERIFICATION.md](VERIFICATION.md). Tests establish specified behavior, not balance.
 
-Bisti’s dedicated current portrait is included. Incomplete regional heroes are unavailable. Team mode shares faction resources and control; separate networked seats and campaign travel/recruitment offers are future work. Existing print kit PDFs retain their historical rules and are not the current digital reference.
+Bisti’s dedicated current portrait is included. Incomplete regional heroes are unavailable. Team mode shares faction resources and control; separate networked seats and campaign travel/recruitment offers are future work.
+
+## Print and play
+[Current 19-page kit](print-and-play/current/Moonfall-Tactics-print-and-play.pdf) · [Single-sheet action tracks](print-and-play/current/06-action-queue.pdf) · [Printing instructions](print-and-play/README.md)
+
+Updated 4 November 2026 with the current watercolor visuals, both player-count tracks, two starting tactics and one tactic per objective. The [Sol plan](planning/sol-update-2026-11-04.md) records current local changes and remaining runtime/data discrepancies; this print release does not certify that all local prototype changes are deployed.
 

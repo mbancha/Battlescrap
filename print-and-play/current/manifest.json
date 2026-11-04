@@ -1,182 +1,881 @@
 {
-  "heroes": [
-    {
-      "id": "h01",
-      "name": "Kalawi Bloodmane",
-      "region": "Windlands",
-      "role": "STRIKER / Scout",
-      "hp": 3,
-      "move": 5,
-      "attack": 5,
-      "range": 1,
-      "defense": 2,
-      "cost": 5,
-      "text": "Lightning + 1 AP: move up to 2, then make a melee attack. If another ally is adjacent to the target, add +2 Attack dice."
-    },
-    {
-      "id": "h11",
-      "name": "Hester Wellward",
-      "region": "Wellington",
-      "role": "GUARD / Support",
-      "hp": 5,
-      "move": 3,
-      "attack": 3,
-      "range": 1,
-      "defense": 6,
-      "cost": 6,
-      "text": "Water: gain 2 Fortified."
-    },
-    {
-      "id": "h03",
-      "name": "Voru Cinderveil",
-      "region": "Cinder\u2019s Rim",
-      "role": "CONTROLLER / Striker",
-      "hp": 2,
-      "move": 4,
-      "attack": 4,
-      "range": 3,
-      "defense": 2,
-      "cost": 4,
-      "text": "Fire: gain 1 Enraged, then Pull an enemy within 3 up to 1."
-    },
-    {
-      "id": "h04",
-      "name": "Tavi Sailwhistle",
-      "region": "Port Cutlass",
-      "role": "SCOUT / Support",
-      "hp": 2,
-      "move": 6,
-      "attack": 2,
-      "range": 2,
-      "defense": 2,
-      "cost": 3,
-      "text": "Lightning + 1 AP: attack an enemy exactly 2 spaces away, then move up to 2."
-    },
-    {
-      "id": "h13",
-      "name": "Demea Lastbanner",
-      "region": "Phalexia",
-      "role": "SUPPORT / Guard",
-      "hp": 4,
-      "move": 3,
-      "attack": 2,
-      "range": 1,
-      "defense": 2,
-      "cost": 4,
-      "text": "Water: Pull any two other allies up to 2 spaces each toward Demea."
-    },
-    {
-      "id": "h06",
-      "name": "Niala Grassveil",
-      "region": "Windlands",
-      "role": "CONTROLLER / Support",
-      "hp": 3,
-      "move": 5,
-      "attack": 2,
-      "range": 2,
-      "defense": 2,
-      "cost": 3,
-      "text": "Lightning: move another ally within 3 up to 2, then give one enemy adjacent to that ally 1 Dazed."
-    },
-    {
-      "id": "h12",
-      "name": "Perrin Lastdrop",
-      "region": "Wellington",
-      "role": "SUPPORT / Guard",
-      "hp": 4,
-      "move": 3,
-      "attack": 2,
-      "range": 1,
-      "defense": 3,
-      "cost": 4,
-      "text": "Fire: gain 2 Enraged. While Perrin has Enraged, other adjacent allies gain +1 Attack die."
-    },
-    {
-      "id": "h08",
-      "name": "Ketu Ashheart",
-      "region": "Cinder\u2019s Rim",
-      "role": "STRIKER / Controller",
-      "hp": 3,
-      "move": 4,
-      "attack": 6,
-      "range": 2,
-      "defense": 1,
-      "cost": 7,
-      "text": "Fire: gain 2 Enraged and 1 Dazed."
-    },
-    {
-      "id": "h14",
-      "name": "Ilex Marchstep",
-      "region": "Phalexia",
-      "role": "SCOUT / Guard",
-      "hp": 3,
-      "move": 5,
-      "attack": 3,
-      "range": 1,
-      "defense": 2,
-      "cost": 4,
-      "text": "Lightning: move an adjacent ally up to 3, then move Ilex up to 3."
-    },
-    {
-      "id": "h10",
-      "name": "Orro Stormanchor",
-      "region": "Port Cutlass",
-      "role": "GUARD / Controller",
-      "hp": 4,
-      "move": 3,
-      "attack": 2,
-      "range": 2,
-      "defense": 7,
-      "cost": 6,
-      "text": "Water: Push up to two adjacent enemies 1 space each."
-    }
-  ],
+  "date": "2026-11-04",
   "files": [
     "00-rules-and-legend.pdf",
+    "06-action-queue.pdf",
     "01-tableau-cards.pdf",
     "02-portrait-cards.pdf",
+    "02-folding-standees.pdf",
     "03-tactics.pdf",
+    "04-tokens.pdf",
+    "05-ownership-holders.pdf",
     "07-objectives.pdf",
     "08-recruit-reference.pdf",
     "09-equipment.pdf",
-    "04-tokens.pdf",
-    "05-ownership-holders.pdf",
-    "06-action-queue.pdf",
-    "02-folding-standees.pdf",
     "10-map.pdf"
   ],
-  "objective_deck": "nine distinct objectives; all reward 1 VP + 1 tactic; no refill",
-  "queue_ap_rap": [
-    [
-      1,
-      0
+  "pages": 19,
+  "queue_ap_rap": {
+    "3": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        2
+      ]
     ],
-    [
-      1,
-      1
-    ],
-    [
-      2,
-      1
-    ],
-    [
-      2,
-      2
-    ],
-    [
-      3,
-      2
-    ],
-    [
-      4,
-      3
+    "4": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        2
+      ]
     ]
+  },
+  "track_inches": [
+    10,
+    1
   ],
-  "range_notation": "Attack dice (range)",
-  "heart_stroke_pt": 3,
-  "standee_folded_inches": [
-    1.25,
-    2.5
+  "track_page_inches": [
+    11,
+    8.5
   ],
-  "balance": "TEST stats and prices; four Cinder/Cutlass choices confirmed; new heroes selected; Windlands recommended defaults retained"
+  "starting_tactics": 2,
+  "objective_tactics": 1,
+  "heroes": [
+    "h01",
+    "h03",
+    "h04",
+    "h11",
+    "h13",
+    "h06",
+    "h08",
+    "h10",
+    "h12",
+    "h14"
+  ],
+  "tactic_cards": 36,
+  "objectives": 6,
+  "placements": [
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h01",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h03",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h04",
+      "x": 396.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h11",
+      "x": 36.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h13",
+      "x": 216.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h06",
+      "x": 396.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h08",
+      "x": 36.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h10",
+      "x": 216.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 1,
+      "id": "h12",
+      "x": 396.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 2,
+      "id": "h14",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h01",
+      "x": 36.0,
+      "y": 648,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h03",
+      "x": 126.0,
+      "y": 648,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h04",
+      "x": 216.0,
+      "y": 648,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h11",
+      "x": 306.0,
+      "y": 648,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h13",
+      "x": 396.0,
+      "y": 648,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h06",
+      "x": 486.0,
+      "y": 648,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h08",
+      "x": 36.0,
+      "y": 522,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h10",
+      "x": 126.0,
+      "y": 522,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h12",
+      "x": 216.0,
+      "y": 522,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "02-portrait-cards.pdf",
+      "page": 1,
+      "id": "h14",
+      "x": 306.0,
+      "y": 522,
+      "width": 90,
+      "height": 126
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-attack",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-attack",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-defense",
+      "x": 396.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-damage",
+      "x": 36.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-damage",
+      "x": 216.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-cancel",
+      "x": 396.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-counter",
+      "x": 36.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-moveHeal",
+      "x": 216.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 1,
+      "id": "Fire-assault",
+      "x": 396.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-attack",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-attack",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-defense",
+      "x": 396.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-damage",
+      "x": 36.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-damage",
+      "x": 216.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-cancel",
+      "x": 396.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-counter",
+      "x": 36.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-moveHeal",
+      "x": 216.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 2,
+      "id": "Water-assault",
+      "x": 396.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-attack",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-attack",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-defense",
+      "x": 396.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-damage",
+      "x": 36.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-damage",
+      "x": 216.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-cancel",
+      "x": 396.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-counter",
+      "x": 36.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-moveHeal",
+      "x": 216.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 3,
+      "id": "Earth-assault",
+      "x": 396.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-attack",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-attack",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-defense",
+      "x": 396.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-damage",
+      "x": 36.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-damage",
+      "x": 216.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-cancel",
+      "x": 396.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-counter",
+      "x": 36.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-moveHeal",
+      "x": 216.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "03-tactics.pdf",
+      "page": 4,
+      "id": "Wind-assault",
+      "x": 396.0,
+      "y": 18,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Concord Fire",
+      "x": 126.0,
+      "y": 702,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Concord Water",
+      "x": 216.0,
+      "y": 702,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Concord Earth",
+      "x": 306.0,
+      "y": 702,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Concord Wind",
+      "x": 396.0,
+      "y": 702,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Wildmoon Fire",
+      "x": 126.0,
+      "y": 630,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Wildmoon Water",
+      "x": 216.0,
+      "y": 630,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Wildmoon Earth",
+      "x": 306.0,
+      "y": 630,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "05-ownership-holders.pdf",
+      "page": 1,
+      "id": "Wildmoon Wind",
+      "x": 396.0,
+      "y": 630,
+      "width": 90,
+      "height": 72
+    },
+    {
+      "file": "07-objectives.pdf",
+      "page": 1,
+      "id": "v12-to01",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "07-objectives.pdf",
+      "page": 1,
+      "id": "v12-to02",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "07-objectives.pdf",
+      "page": 1,
+      "id": "v12-to03",
+      "x": 396.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "07-objectives.pdf",
+      "page": 1,
+      "id": "v12-to04",
+      "x": 36.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "07-objectives.pdf",
+      "page": 1,
+      "id": "v12-to05",
+      "x": 216.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "07-objectives.pdf",
+      "page": 1,
+      "id": "v12-to06",
+      "x": 396.0,
+      "y": 270,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "08-recruit-reference.pdf",
+      "page": 1,
+      "id": "Concord",
+      "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "08-recruit-reference.pdf",
+      "page": 1,
+      "id": "Wildmoon",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "boots",
+      "x": 36.0,
+      "y": 630,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "shield",
+      "x": 216.0,
+      "y": 630,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "weapon",
+      "x": 396.0,
+      "y": 630,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "lens",
+      "x": 36.0,
+      "y": 486,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "recruit-boots",
+      "x": 216.0,
+      "y": 486,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "recruit-shield",
+      "x": 396.0,
+      "y": 486,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "recruit-weapon",
+      "x": 36.0,
+      "y": 342,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "boots",
+      "x": 216.0,
+      "y": 342,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "shield",
+      "x": 396.0,
+      "y": 342,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "weapon",
+      "x": 36.0,
+      "y": 198,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "lens",
+      "x": 216.0,
+      "y": 198,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "recruit-boots",
+      "x": 396.0,
+      "y": 198,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "recruit-shield",
+      "x": 36.0,
+      "y": 54,
+      "width": 180,
+      "height": 144
+    },
+    {
+      "file": "09-equipment.pdf",
+      "page": 1,
+      "id": "recruit-weapon",
+      "x": 216.0,
+      "y": 54,
+      "width": 180,
+      "height": 144
+    }
+  ],
+  "source_sha256": "33a7dd3a3d5af3ecb3c37207bc0aa4222a48832d9baa34b64608710378eeddb3"
 }

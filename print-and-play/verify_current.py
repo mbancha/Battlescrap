@@ -1,69 +1,57 @@
+"""Validate the current mixed-orientation kit, quantities and print geometry."""
 from pathlib import Path
 import json, hashlib
+from collections import Counter
 import pdfplumber
 from pypdf import PdfReader
-from PIL import Image, ImageDraw
 
-OUT=Path(__file__).resolve().parent/'current'
-m=json.loads((OUT/'manifest.json').read_text(encoding='utf8'))
+ROOT=Path(__file__).resolve().parent
+OUT=ROOT/'current'
+m=json.loads((OUT/'manifest.json').read_text())
 checks=[]
-def check(name,condition):
-    assert condition,name
+def check(name,ok):
+    assert ok,name
     checks.append(name)
-def text(name):
-    return '\n'.join(p.extract_text() or '' for p in PdfReader(OUT/name).pages)
-check('19-page kit',len(PdfReader(OUT/'Battlescrap-print-and-play.pdf').pages)==19)
-check('No card-back PDFs in current output',not list(OUT.glob('*backs.pdf')))
-check('No recruit standee PDFs',not (OUT/'14-reserve-recruits.pdf').exists())
-check('48 generic tactics',text('03-tactics.pdf').count('+2')==48)
-check('One objective sheet',len(PdfReader(OUT/'07-objectives.pdf').pages)==1)
-obj=text('07-objectives.pdf')
-check('Exactly nine one-VP/tactic objectives',obj.count('1 VP + 1 tactic')==9 and '2 VP' not in obj and 'Trade Blows' not in obj)
-check('One item sheet',len(PdfReader(OUT/'09-equipment.pdf').pages)==1)
-with pdfplumber.open(OUT/'09-equipment.pdf') as d:
-    check('14 item cards including upgrades',len([r for r in d.pages[0].rects if r['stroke'] and abs(r['width']-180)<.01 and abs(r['height']-126)<.01])==14)
-rec=text('08-recruit-reference.pdf')
-check('Recruit rules removed',not any(s in rec for s in ['AP','RAP','Poison','Move','Defense','defeat','Brightstone']))
-check('Both faction recruit cards',all(n+' RECRUITS' in rec for n in ['Concord','Wildmoon']))
-with pdfplumber.open(OUT/'08-recruit-reference.pdf') as d:
-    check('Recruit faction raster symbols',len(d.pages[0].images)==2)
-    check('No meeple symbol',not any(c.get('fill') and c.get('width',0)>40 and c.get('height',0)>40 for c in d.pages[0].curves))
-with pdfplumber.open(OUT/'02-folding-standees.pdf') as d:
-    rs=[r for r in d.pages[0].rects if abs(r['width']-90)<.01 and abs(r['height']-360)<.01]
-    check('Ten 125-percent hero standees',len(rs)==10 and len(d.pages)==1)
-    check('Standees touch in 5 by 2 grid',sorted(set(r['x0'] for r in rs))==[81,171,261,351,441] and len(set(r['top'] for r in rs))==2)
-check('No recruit standee labels','Recruit' not in text('02-folding-standees.pdf'))
-with pdfplumber.open(OUT/'04-tokens.pdf') as d:
-    rs=[r for r in d.pages[0].rects if abs(r['width']-50)<.01 and abs(r['height']-50)<.01]
-    check('72 touching token squares',len(rs)==72 and len({(round(r['x0']),round(r['top'])) for r in rs})==72)
-    check('Token grid has no gutters',all(abs((r['x0']-24)%50)<.01 and abs((r['top']-18)%50)<.01 for r in rs))
-tok=text('04-tokens.pdf')
-check('Ten of each status',all(tok.count(s)==10 for s in ['Enraged','Fortified','Dazed','Poison']))
-check('Four traps, seventeen stones, nine identical token backs',tok.count('Trap')==4 and tok.count('Brightstone')==17 and tok.count('?')==9)
-q=m['queue_ap_rap']
-check('Queue endpoints',q[0]==[1,0] and q[-1]==[4,3])
-check('Every step progresses without decreasing',all(c>=a and d>=b and (c>a or d>b) for (a,b),(c,d) in zip(q,q[1:])))
-check('Queue has no draws or unavailable slot',not any(w in text('06-action-queue.pdf').lower() for w in ['draw','unavailable']))
+def text(file):return '\n'.join(p.extract_text() or '' for p in PdfReader(OUT/file).pages)
+check('19-page current kit',len(PdfReader(OUT/'Moonfall-Tactics-print-and-play.pdf').pages)==m['pages']==19)
+check('Verified source hash',hashlib.sha256((ROOT/'source-snapshot.json').read_bytes()).hexdigest()==m['source_sha256'])
+check('Two starting tactics; one objective tactic',m['starting_tactics']==2 and m['objective_tactics']==1)
 with pdfplumber.open(OUT/'06-action-queue.pdf') as d:
-    check('One-page header strips only',len(d.pages)==1 and all(r['height']<=54.01 for r in d.pages[0].rects))
-cards=text('01-tableau-cards.pdf')
-check('Parenthesized ranges',all(v in cards for v in ['4 (3)','2 (2)','6 (2)']) and ' / 2' not in cards and ' / 3' not in cards)
-with pdfplumber.open(OUT/'01-tableau-cards.pdf') as d:
-    hearts=[c for p in d.pages for c in p.curves if c.get('stroking_color')==(1,1,1) and abs(c.get('linewidth',0)-3)<.01]
-    check('Every HP heart has 3-point white outline',len(hearts)==sum(h['hp'] for h in m['heroes']))
-check('White outer outline exceeds five pixels at 300dpi',m['heart_stroke_pt']/2*300/72>=5)
+    p=d.pages[0]
+    check('One landscape Letter track sheet',len(d.pages)==1 and p.width==792 and p.height==612)
+    strips=[r for r in p.rects if abs(r['width']-720)<.01 and abs(r['height']-72)<.01]
+    check('Both tracks exactly ten by one inches',len(strips)==2)
+    for y,n in [(408,3),(246,4)]:
+        values=m['queue_ap_rap'][str(n)]
+        sw=720/len(values)
+        for i,(ap,rap) in enumerate(values):
+            x=36+i*sw
+            s=p.crop((x,612-y-72,x+sw,612-y)).extract_text()
+            check(f'{n}-hero slot {i}: {ap} AP / {rap} RAP',f'{ap} AP' in s and f'{rap} RAP' in s)
+    check('Six and eight sections',len(m['queue_ap_rap']['3'])==6 and len(m['queue_ap_rap']['4'])==8)
+    check('Intentional top RAP drop retained',all(v[-2][1]==3 and v[-1]==[5,2] for v in m['queue_ap_rap'].values()))
+placements=m['placements']
+tc=Counter(p['id'] for p in placements if p['file']=='03-tactics.pdf')
+check('36 tactics / 9 per element',sum(tc.values())==36 and all(sum(v for k,v in tc.items() if k.startswith(e+'-'))==9 for e in ['Fire','Water','Earth','Wind']))
+check('Two Attack and damage; other effects single',all(v==(2 if k.split('-')[1] in ['attack','damage'] else 1) for k,v in tc.items()))
+check('All four Cancel faces use combat-only rule',text('03-tactics.pdf').count('During combat')==4 and 'activate a hero' not in text('03-tactics.pdf'))
+check('Six objective reward labels',text('07-objectives.pdf').count('1 VP + 1 tactic')==6)
+check('Ten stable starter identities, Bisti not Kalawi',len(m['heroes'])==10 and 'h01' in m['heroes'] and 'h15' not in m['heroes'])
+check('Queue portraits fit smallest slot',all(p['width']==90 and p['height']==126 for p in placements if p['file']=='02-portrait-cards.pdf'))
+check('Eight faction/element badges',sum(p['file']=='05-ownership-holders.pdf' for p in placements)==8)
+check('14 equipment / upgrade reminders on one sheet',sum(p['file']=='09-equipment.pdf' for p in placements)==14 and len(PdfReader(OUT/'09-equipment.pdf').pages)==1)
+tok=text('04-tokens.pdf')
+check('Ten of all five statuses',all(tok.count(s)==10 for s in ['Focus','Enraged','Fortified','Dazed','Poison']))
+check('Four traps, seventeen stones and eight ability markers',tok.count('Trap')==4 and tok.count('Moonstone')==17 and tok.count('Ability')==8)
 rules=text('00-rules-and-legend.pdf')
-check('Bottom position selectable','including\nslot 0' in rules or 'including slot 0' in rules)
-check('Low bidder owns highest position','Low bidder takes highest slot 5' in rules)
-check('Rule sheet no queue draw','queue draw' not in rules.lower())
-with pdfplumber.open(OUT/'Battlescrap-print-and-play.pdf') as d:
-    for i,p in enumerate(d.pages):
-        check(f'Page {i+1} text inside Letter page',all(-.1<=w['x0']<=w['x1']<=612.1 and -.1<=w['top']<=w['bottom']<=792.1 for w in p.extract_words()))
-for group in range(4):
-    out=Image.new('RGB',(918,840),'#dedede');draw=ImageDraw.Draw(out)
-    for j,index in enumerate(range(group*6,min(group*6+6,19))):
-        im=Image.open(OUT/f'preview-{index+1:02}.png');im.thumbnail((306,396));x=j%3*306;y=j//3*420;out.paste(im,(x,y));draw.text((x+10,y+398),str(index+1),fill='black')
-    out.save(OUT/f'contact-{group+1}.png')
-(OUT/'verification.json').write_text(json.dumps({'checks_passed':len(checks),'checks':checks,'balance':'Not playtest validated'},indent=2),encoding='utf8')
+check('Current rules economics and hero-only pickup','draw 2 tactics' in rules and '1 VP + 3 tactics' not in rules and '1 Focus' in rules and 'never Recruits' in rules)
+check('Two map halves',len(PdfReader(OUT/'10-map.pdf').pages)==2)
+for p in placements:
+    check(f"In bounds: {p['file']} / {p['id']} / page {p['page']}",0<=p['x'] and 0<=p['y'] and p['x']+p['width']<=612 and p['y']+p['height']<=792)
+with pdfplumber.open(OUT/'Moonfall-Tactics-print-and-play.pdf') as doc:
+    for i,p in enumerate(doc.pages):
+        check(f'Page {i+1} is US Letter',sorted([p.width,p.height])==[612,792])
+        check(f'Page {i+1} vector text in bounds',all(-.1<=w['x0']<=w['x1']<=p.width+.1 and -.1<=w['top']<=w['bottom']<=p.height+.1 for w in p.extract_words()))
+check('GitHub-compatible combined PDF size',(OUT/'Moonfall-Tactics-print-and-play.pdf').stat().st_size<50_000_000)
+(OUT/'verification.json').write_text(json.dumps({'checks_passed':len(checks),'checks':checks,'scope':'PDF geometry, quantities and text; raster card faces visually reviewed. Not runtime or balance certification.'},indent=2))
 print(len(checks),'checks passed')
-

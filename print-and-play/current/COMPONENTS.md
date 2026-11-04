@@ -1,28 +1,17 @@
-# Current PnP — starter test v11
+# Moonfall Tactics print and play
+Current starter kit: **4 November 2026**. [Download the complete kit](Moonfall-Tactics-print-and-play.pdf) or [just the action tracks](06-action-queue.pdf).
 
-19 US Letter pages. Print at 100% / actual size. Design Draft and digital plan are synchronized; digital application implementation is separate.
+Print **19 US Letter pages, single-sided, 100% / Actual size**. Enable automatic portrait/landscape rotation. Do not use Fit to page. The action-track page is landscape; both complete strips are on that single sheet.
 
-## Printable inventory
-- One concise rule sheet with icon/token legend; no assembly cover.
-- 10 hero tableau cards with parenthesized ranges and white-outlined HP hearts.
-- 10 portrait cards, 1.75 × 2.5 inches.
-- 6 faction ownership holders: 3 Concord, 3 Wildmoon.
-- 10 hero-only folding standees, enlarged 25% to 1.25 × 2.5 inches per face; two touching rows of five. No recruit standees.
-- 2 recruit reference cards: faction symbol/name plus HP 2, Move 2, Attack 1, Defense 1 using hero-style icons; no rules text or meeple.
-- 48 tactics: 24 per player, 8 per element, equally divided Attack/Defense.
-- 9 distinct objectives on one sheet, each 1 VP + 1 tactic; no deck refill. Trade Blows held for a later test.
-- One item sheet: 8 equipment cards and 6 recruit upgrade references.
-- 10 each Enraged, Fortified, Dazed, Poison; 4 traps; 5 setup and 12 reserve Brightstone; 9 identical trap/Brightstone token backs; 2 VP markers. All token squares touch edge to edge.
-- Two cuttable queue header strips on one sheet. Join left to right above the cards; no card spaces. AP/RAP: 1/0, 1/1, 2/1, 2/2, 3/2, 4/3. No queue draws; bottom is usable.
-- Original unboxed map over two sheets.
-- No tactic or objective card backs.
+## Components
+- 3-page rules, assembly and scenario reference.
+- Two **10 x 1 inch** tracks: six slots for 2 players; eight for 3-4 players sharing two factions.
+- 10 poker-size hero cards, 10 compact 1.25 x 1.75 inch queue portraits, and 10 folding hero standees.
+- 36 tactics: one shared deck, nine per element. Remove the omitted element for 2-player games (27 cards).
+- 6 objectives, each awarding **1 VP + 1 tactic**. Start with **2 tactics** per faction.
+- Ten tokens of each of five statuses, eight ability markers, four traps, seventeen Moonstones, nine identical setup-token backs and a VP track.
+- Eight faction/element badges, two Recruit references, fourteen equipment/upgrade reminders, and the original map on two joined sheets.
 
-## Supply separately
-D6 dice, red damage cubes, recruit miniatures/proxies, suitably sized hero standee bases, and chipboard/sticker paper for the holders. Opaque sleeves or opaque backing are useful for hidden card hands.
+Use compact queue portraits with these strips; the former wide holders do not fit eight across Letter. Place element badges beneath the portraits and match standee-base markings. Supply Recruit pieces (three per faction plus purchased extras), red damage cubes, dice and two VP markers. Opaque sleeves hide card backs. Print more status tokens as required.
 
-## Rules and presentation
-Low bidder owns queue positions 5/3/1, high bidder 4/2/0; randomly deal identities into those positions. When bids are equal and zones differ, the current test fallback gives the second player the top position. Ordinary first-turn rules otherwise remain.
-Attack icon red; ranged Attack green; Defense blue. Display Attack dice (range), e.g. 4 (3); retain EXACTLY 2 restrictions. Hearts have a 3-point white stroke, giving 6.25 visible outer pixels at 300 dpi.
-
-## Verification
-48 checks passed, including counts, range text, recruit card contents, item-sheet layout, touching token/standee geometry, 125% standee size, heart outlines, queue progression, and text bounds. All 19 rendered pages visually reviewed. Stats and 3–7 PP prices remain playtest estimates; exactly three heroes within 15 PP.
+The current Cancel cards follow the newer combat-only rule. The live sheet and runtime text still contain older ability-cancellation wording; this discrepancy is recorded in the [Sol plan](../../planning/sol-update-2026-11-04.md). Unfinished regional heroes remain unavailable. Team setup and campaign income remain TEST.

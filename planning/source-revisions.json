@@ -1,29 +1,36 @@
 {
-  "verified_at": "2026-10-30",
-  "rules_version": "holder-elements-v13",
-  "digital_version": "holder-elements-v13",
-  "schema": 2,
+  "verified_at": "2026-11-04",
+  "scope": "Print-and-play and consolidated Sol plan. Runtime implementation and deployment not certified by this pass.",
   "design": {
     "documentId": "1PlwHc5BWQdSv77xgSlSmNEiZIhgJ40cii22NKibvcFM",
-    "revisionId": "AHj4eMQOkVaG-awAEFaivAWjrxULLRoOzXP6Lc6S0pN0rNLX37PiwhA-0yRL8tTh4e6TCwKaR5rY78x-VNdSGhC51NijWWgWovUn5vG2",
-    "title": "Battlescrap — Design Draft"
+    "revisionId": "AHj4eMSnjWJpfTU9b1UubAO8K1eZjlrtILCmGyypeITeaa3oIIXqGk07vbXf9BXTF1JVru9uw7_1UZ73zo0Fk9EKwS0n2gdigRbg3iGy"
   },
   "build": {
     "documentId": "16-weAaDa4W7e4gC2jeiv_NN0cSAS_bcd_WATxPcDSAU",
-    "revisionId": "AHj4eMRAqRxPdYDktc5-6LgQBw7VznFzfuwYT967XVL7JX3xTt4LdTiLiI1hs5aT2Sr-emVSMXJKQPyaFHnxzKfyfGdkPZdHQT-bW0Cs",
-    "title": "Battlescrap — Digital Prototype Build Specification (Sol 6.1)"
+    "revisionId": "AHj4eMTy2ZyYf1UBDIDhjs-2r1QOaxsb_Wg0f2V6hFuyVael109fwoCoz9-sHs9Etbf6KnUIbushMctc68Tziovy6EZPap5LjVa3Ij1d"
   },
-  "heroes": {
+  "sheet": {
     "spreadsheetId": "1hfWFhxm-Su-qtR_hVrzFt6GBW1ure8W4xmp1o8hF-Rg",
-    "url": "https://docs.google.com/spreadsheets/d/1hfWFhxm-Su-qtR_hVrzFt6GBW1ure8W4xmp1o8hF-Rg/edit",
     "tabs": [
       "Heroes",
       "Regions",
-      "Rules & notes"
+      "Tactics",
+      "Objectives",
+      "Equipment",
+      "Battlefield modifiers",
+      "Scenarios"
     ],
-    "snapshot": "src/data/hero-snapshot.json",
-    "verified": "Final readback matches current implemented starter data; additional trailing blank cells only."
+    "snapshot": "print-and-play/source-snapshot.json"
   },
-  "scope": "Current docs and digital prototype implemented. Historical print PDFs not regenerated. Text sources use Port Cutlass.",
-  "playtest_defaults": "Authorized by designer; eight-slot queue retains confirmed endpoints and inserts two intermediate slots."
+  "confirmed": {
+    "starting_tactics": 2,
+    "objective_tactics": 1,
+    "moonstone_tactics": 1,
+    "moonstone_focus": 1
+  },
+  "known_conflicts": [
+    "Sheet/runtime Cancel wording still mentions ability cancellation, superseded by combat-only timing.",
+    "Local hero snapshot has obsolete notes and replacement characters.",
+    "Runtime version and acceptance need Sol review."
+  ]
 }
