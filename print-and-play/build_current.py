@@ -110,7 +110,7 @@ def img(c,path,x,y,w,h,contain=False):
 
     c.drawImage(IMAGE_CACHE[key],x,y,w,h,mask='auto')
 
-def icon(c,key,x,y,size):img(c,ICONS/(key+'.webp'),x,y,size,size,True)
+def icon(c,key,x,y,size):img(c,ICONS/(key+('.png' if (ICONS/(key+'.png')).exists() else '.webp')),x,y,size,size,True)
 
 def paper(c,x,y,w,h):img(c,PRINT/'action-track-watercolor-paper.png',x,y,w,h)
 
@@ -226,16 +226,12 @@ def portrait(c,h,w,ht):
     c.setStrokeColor(HexColor('#883c51' if h['Starter side']=='Concord' else '#447fa0'));c.setLineWidth(2);c.rect(1,1,w-2,ht-2)
 
 def tactic(c,t,w,h):
-
-    if not t['ID'].endswith('-cancel'):
-
-        img(c,PRINT/'cards'/(t['ID']+'.png'),0,0,w,h);return
-
     img(c,ICONS/'tactic-card-template.webp',0,0,w,h)
-
     icon(c,t['Element'].lower(),w/2-63,105,126)
-
-    para(c,"During combat, cancel the opponent's immediately preceding tactic, including Cancel. Playing a boost instead gives up this chance.",14,79,w-28,68,10,1)
+    effect=t['Card text']
+    if t['ID'].endswith('-cancel'):
+        effect="During combat, cancel the opponent's immediately preceding tactic, including Cancel. Playing a boost instead gives up this chance."
+    rich(c,effect,14,79,w-28,68,9)
 
 def objective(c,o,w,h):
 
