@@ -127,3 +127,25 @@ Keep ARCHITECTURE.md, DECISIONS.md, verification notes and this plan aligned wit
 Regional source alignment
 
 Phalexia is the formation region’s name across Regions, Heroes, world text and implementation snapshots. Several regional hero fields are TBD. Current playable availability is the ten complete starters.
+
+9. Simulation reporting
+
+Continue running multiple different legal team rosters across paired seeds, swapping seats/deployment assignments for comparison. Report hero-level results aggregated across those varied teams. Retain roster/seed/config metadata in raw results for reproducibility. The summary unit is the individual hero.
+
+For each hero show appearances, wins and win rate: a win is a victory by the faction fielding that hero, and the denominator is completed games in which that hero was fielded. Include sample counts and a confidence interval, balance appearances where practical, and label low-sample results. These are roster-associated outcomes under the tested bot policy, rather than an isolated measure of hero strength. Separate three-hero and four-hero modes and materially different scenarios/configurations.
+
+For completed games report these per-game averages, counting both factions together:
+
+• Total gameplay actions: count each resolved paid basic action, paid unique ability activation and printed tactic play once. Record granted/free moves and attacks separately; report their total alongside paid actions and tactic plays. Setup inputs, passes, target selection, dice clicks, response housekeeping and automatic consequences are separate telemetry events. This definition keeps UI implementation details from inflating the gameplay-action count.
+
+• Game length in faction turns: one faction activation is one turn; include a terminal turn that ends at its start-of-turn scoring checkpoint. Label the unit explicitly.
+
+• Hero deaths and Recruit deaths, separately, plus combined deaths. Count each defeat event, including repeated deaths after respawn, once.
+
+• Tactic cards earned per game, with totals by source: Moonstone pickup, hero-defeat compensation, tactical objectives, scenario VP rewards, hero/regional abilities, and any other explicitly authored draw source. Record starting hands and purchased starting draws separately from earned cards. Count cards actually received; also retain requested draws, supply shortages and overflow discards so the totals can be reconciled. Pass an explicit source identifier through the draw pipeline.
+
+Recommended supporting measures: median and 10th/90th percentiles for game length and action count; first-player/deployment-side win rates; VP earned by source; stalled/turn-limit games; and hero activation counts. These help distinguish queue access, scoring and bot-flow problems from hero strength. Show completed/attempted game counts and excluded runs alongside averages.
+
+Implement counters at authoritative committed engine events and aggregate in the simulation runner. Keep telemetry deterministic and preserve it through replay/save as appropriate. Include seed, rules/content version, bot-policy version, mode and scenario in exports. The UI presents a compact game-summary panel, a hero-results table and a tactic-income breakdown.
+
+Acceptance: varied rosters still run; paired seeds are reproducible; hero appearances/wins reconcile with match outcomes; per-source tactic receipts sum to earned totals; setup draws stay separate; repeated hero/Recruit defeats count correctly; free effects and multi-step prompts follow the action-count definition; early victory, stalled runs and zero completed-game batches produce clear results. Verify a small hand-counted fixture and the headless/UI report against the same raw results.
