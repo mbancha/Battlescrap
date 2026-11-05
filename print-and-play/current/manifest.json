@@ -10,11 +10,10 @@
     "04-tokens.pdf",
     "05-ownership-holders.pdf",
     "07-objectives.pdf",
-    "08-recruit-reference.pdf",
     "09-equipment.pdf",
     "10-map.pdf"
   ],
-  "pages": 19,
+  "pages": 16,
   "queue_ap_rap": {
     "3": [
       [
@@ -188,6 +187,24 @@
       "page": 2,
       "id": "h14",
       "x": 36.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 2,
+      "id": "Concord",
+      "x": 216.0,
+      "y": 522,
+      "width": 180,
+      "height": 252
+    },
+    {
+      "file": "01-tableau-cards.pdf",
+      "page": 2,
+      "id": "Wildmoon",
+      "x": 396.0,
       "y": 522,
       "width": 180,
       "height": 252
@@ -610,73 +627,73 @@
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Concord Fire",
-      "x": 126.0,
-      "y": 702,
-      "width": 90,
-      "height": 72
+      "x": 63.0,
+      "y": 576,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Concord Water",
-      "x": 216.0,
-      "y": 702,
-      "width": 90,
-      "height": 72
+      "x": 225.0,
+      "y": 576,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Concord Earth",
-      "x": 306.0,
-      "y": 702,
-      "width": 90,
-      "height": 72
+      "x": 387.0,
+      "y": 576,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Concord Wind",
-      "x": 396.0,
-      "y": 702,
-      "width": 90,
-      "height": 72
+      "x": 63.0,
+      "y": 378,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Wildmoon Fire",
-      "x": 126.0,
-      "y": 630,
-      "width": 90,
-      "height": 72
+      "x": 225.0,
+      "y": 378,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Wildmoon Water",
-      "x": 216.0,
-      "y": 630,
-      "width": 90,
-      "height": 72
+      "x": 387.0,
+      "y": 378,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Wildmoon Earth",
-      "x": 306.0,
-      "y": 630,
-      "width": 90,
-      "height": 72
+      "x": 63.0,
+      "y": 180,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "05-ownership-holders.pdf",
       "page": 1,
       "id": "Wildmoon Wind",
-      "x": 396.0,
-      "y": 630,
-      "width": 90,
-      "height": 72
+      "x": 225.0,
+      "y": 180,
+      "width": 162,
+      "height": 198
     },
     {
       "file": "07-objectives.pdf",
@@ -729,24 +746,6 @@
       "id": "v12-to06",
       "x": 396.0,
       "y": 270,
-      "width": 180,
-      "height": 252
-    },
-    {
-      "file": "08-recruit-reference.pdf",
-      "page": 1,
-      "id": "Concord",
-      "x": 36.0,
-      "y": 522,
-      "width": 180,
-      "height": 252
-    },
-    {
-      "file": "08-recruit-reference.pdf",
-      "page": 1,
-      "id": "Wildmoon",
-      "x": 216.0,
-      "y": 522,
       "width": 180,
       "height": 252
     },

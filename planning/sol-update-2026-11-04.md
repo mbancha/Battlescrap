@@ -36,3 +36,5 @@ Retest live hero boundary conditions, pending movement/assault choices, all full
 Run npm test, npm run build, npm run assets, paired seeded simulations and browser acceptance from the standalone repository root. Verify keyboard/touch/mouse rolls, hotseat privacy, wrapping full/overflow hands, visible objectives, equipment purchase/inspection, combat choices above the log, and undo/resume mid-combat. Record actual results and limits; print verification alone is not runtime acceptance.
 For print, rebuild and check Letter geometry, both 72-point-high strips, exact AP/RAP labels, deck quantities, stable identities, map aspect ratio, text bounds and grayscale readability. Inspect every rendered sheet and representative actual-size cards. Publish only the requested print and documentation changes; leave unrelated local runtime work intact for Sol's separate tested release.
 
+
+Current print revision: no ongoing effects or backs; one rules/legend sheet; 22-point attack band; Region/PP immediately above it; Recruit cards appended to heroes; icon equipment text; 0-20 VP track aligned to token bottom; queue holders 162 x 198 points around 90 x 126 point cards.
