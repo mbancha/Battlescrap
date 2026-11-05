@@ -140,7 +140,15 @@ def grid(name,items,draw,w=180,h=252,cols=3,rows_per_page=3):
 
         PLACEMENTS.append({'file':name,'page':i//(cols*rows_per_page)+1,'id':item.get('ID',item.get('id','')),'x':x,'y':y,'width':w,'height':h})
 
-        if i%(cols*rows_per_page)==cols*rows_per_page-1 or i==len(items)-1:c.showPage()
+        if i%(cols*rows_per_page)==cols*rows_per_page-1 or i==len(items)-1:
+            if name=='02-portrait-cards.pdf':
+                text(c,'VICTORY POINTS',36,450,12,'Title')
+                for v in range(21):
+                    col=v if v<11 else v-11
+                    x=36+col*49;y=378 if v<11 else 324
+                    paper(c,x,y,49,54);border(c,x,y,49,54)
+                    text(c,v,x+24.5,y+18,18,'Title',True)
+            c.showPage()
 
     c.save()
 
@@ -294,12 +302,6 @@ def tokens():
     for i,(key,name) in enumerate(entries):
 
         x=36+i%10*54;y=720-i//10*54;paper(c,x,y,54,54);icon(c,key,x+13,y+18,28);text(c,name,x+27,y+6,6,'Sans',True);border(c,x,y,54,54)
-
-    for i in range(21):
-
-        x=576;step=432/21;y=774-(i+1)*step
-
-        border(c,x,y,24,step);text(c,i,x+12,y+6,9,'Body',True)
 
     c.save()
 
