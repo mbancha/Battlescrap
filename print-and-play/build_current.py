@@ -311,7 +311,7 @@ def holders():
 
         paper(c,0,0,w,h)
 
-        c.setStrokeColor(HexColor('#883c51' if a['side']=='Concord' else '#447fa0'));c.setLineWidth(2);c.rect(1,1,w-2,h-2)
+        c.setStrokeColor(HexColor('#883c51' if a['side']=='Concord' else '#447fa0'));c.setLineWidth(72/2.54);c.rect(36/2.54,36/2.54,w-72/2.54,h-72/2.54)
 
         border(c,36,36,90,126)
 
