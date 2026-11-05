@@ -1,31 +1,25 @@
-# Battlescrap architecture — shared-elements-v15
-Verified against the current live sources on 30 October 2026. General rules live in the linked documents; this file describes implementation rather than duplicating them.
+# Moonfall Tactics implementation map
+Local code inspected 5 November 2026. The [Build Specification](planning/build-spec-current.txt) owns the target and release gates.
 
 ## Modules
-- `src/data/config.ts`: tunable budgets, both queue curves, faction element pairs/colors, modifiers, rewards and upgrade cost.
-- `src/data/hero-snapshot.json`: current hero and regional content snapshot from the authoritative sheet, with source URL/date.
-- `src/content.ts`: header-position snapshot adapter, ten complete starters, mirrored elemental tactic definitions, upgrades, objectives, equipment and calibrated full-hex map.
-- `src/engine.ts`: serializable state, seeded RNG, authoritative actions/validation, bidding, setup, AP/RAP, combat, status/terrain resolution, effect/Cancel queues, objectives, campaign settlement/upgrades, projection, bots and replay.
-- `src/icons.tsx`: shared red sword/bow, element silhouettes and rainbow generic icon, distance hexes, HP/status rendering.
-- `src/App.tsx`: component interaction, private handoff, tableaus, queue, highlighted board targets, save/replay, undo barriers and automatic bots. `styles.css` and `update.css` own presentation.
-- `src/simulation*`: worker-backed optional analysis; `scripts/` runs simulations, fixtures, assets and browser acceptance.
+- src/data/config.ts: budgets, queues, shared elements, reward defaults and modifiers.
+- src/data/hero-snapshot.json and tactics.json: header-based content snapshots.
+- src/content.ts: component definitions, equipment, upgrades, objectives and full-hex map geometry.
+- src/engine.ts: serializable state/RNG, legal actions, setup, AP/RAP, combat, effect queues, statuses, terrain, rewards, projections, bots and replay.
+- src/icons.tsx: digital symbol renderer; src/App.tsx and stylesheets: interaction, card views, inspection, log, dice and bot scheduling.
+- print-and-play/build_current.py: current print layouts and native hero faces. scripts/build-card-faces.py invokes its character rebuild.
+- scripts/: simulations, asset validation and browser checks.
 
-## Contracts
-`newGame(seed, config)` and `applyAction/dispatch(state, action)` form the engine API. `legalActions/actions` enumerates decisions for UI, bots and tests. Validate a clone before committing; rejected actions leave the input unchanged. All random choices use state RNG. Effects, multi-target movement, combat, response stacks and overflow are serializable. Saves are schema 2/version shared-elements-v15; incompatible versions are rejected.
+## State and contracts
+newGame and applyAction/dispatch expose the rules; legalActions/actions enumerate choices. The app validates a cloned state before committing. Seeded randomness and pending decisions remain in serializable state. Player projections govern hands, objectives, bids and public information.
 
-State separates faction draw/discard/hand piles, objective deck, per-game holder elements, AP/RAP, hero action counters, shared Recruit counters, ongoing tokens, five statuses, modifier/Wind state, permanent Xs, traps/stones and persistent campaign RP/wins/upgrades. Cards have stable instance IDs and one owning faction zone. PP/RP use integer half-units; other numeric resources use native integers.
+One shared tactic draw/discard supply serves private faction hands. State includes holder elements, AP/RAP, independent hero action counters, shared Recruit counters, status stacks, ongoing-effect flags, scenario modifiers and secured stones. The current ongoing flag is u.tokens.ongoing; Sol's plan specifies the active-state migration.
 
-A paid ability/tactic commits costs and opens a Cancel stack before effects. A shared effect queue pauses on real choices. Combat snapshots participating statuses at roll, resolves damage once, preserves new tokens, and stops on victory. Setup and terrain use the supplied 21 October map with partial hexes excluded.
+Combat responses operate on committed combat tactics. Paid abilities resolve through resumable effects. Status stacks are captured at the roll boundary. Victory and settlement consequences resolve once.
 
-`playerView` removes deck order, RNG/seed, bids, history, pending private effects and opponent hand/objective faces. Bot choice uses its projected view plus legal actions; no hidden-card lookups. Public discard counts remain visible. File exports are explicitly private.
+The local configuration identifies shared-elements-v15; saves use schema 2. Versioning and migration acceptance are part of the next tested release.
 
-## Current scope
-Local 1v1 and shared-faction 1v2/2v2 tests, three/four heroes per faction, ten complete starter abilities, separate mirrored upgradeable decks, six modifiers on subsequent scenarios, full turn/combat/objective/reward migration. Regional recruits marked incomplete stay unavailable. Approved portraits are preserved; Bisti uses initials.
+## Presentation status
+Current local views use hero/tactic/objective card images and identity-correct watercolor portraits. Equipment currently combines art with live text overlays. Hands wrap, objectives remain visible, current choices sit above the chronological log, and dice have an animated click-to-roll control.
 
-## Migration
-30 October 2026: replaced the older turn-rules-v8 engine/content and UI rule descriptions with the full current rules. Removed linked hero cards, suit-for-AP discard, group queue cards, basic Push/Cleanse, old statuses, heavy attack halving and old objectives. Added the holder-element rules and current sheet abilities. Historical v8 fixtures are archived in `sources/tests-v8/`; current regression coverage is in `tests/current.test.ts`.
-
-## 30 October 2026 shared-elements-v15 implementation
-The four elements Fire, Water, Earth and Wind are shared by both factions. One state-level draw/discard pair serves both private hands: 27 cards with three active elements or 36 with four. Each faction independently receives a seeded permutation of the same active set at roster lock. Tactic faces use element/effect text from src/data/tactics.json; no named tactics or tactic upgrades exist. Existing equipment and Recruit group upgrades remain.
-Only heroes may Grab or automatically collect stones. Spawn geometry includes twelve full blue hexes and eight full stone hexes, including upper-edge full hexes within pixel tolerance. Bot movement targets adjacent fire-control spaces and penalizes the actual path’s hazards; Recruits do not seek stones.
-App.tsx renders compact queue/map/action panels and one private tactic row. ALT inspection renders current wounds, statuses, equipment and ability markers; selected-unit Inspect supports click/keyboard. The How to play brief contains general rules; scenario/objective details live in the expandable decision panel. Portrait browser copies use approved-v9 masters and the current identity-correct Bisti file. Save content version v15 rejects incompatible prior versions.
+The target is one manifest/generator for complete image faces across every in-use card family and a one-second central opponent-card reveal. The plan includes synchronizing the asset validator with the current triangle icons.

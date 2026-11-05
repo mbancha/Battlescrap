@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "files": [
     "00-rules-and-legend.pdf",
     "01-tableau-cards.pdf",
@@ -876,5 +876,5 @@
       "height": 144
     }
   ],
-  "source_sha256": "33a7dd3a3d5af3ecb3c37207bc0aa4222a48832d9baa34b64608710378eeddb3"
+  "source_sha256": "59b1a68abb851576f7ba2266456d8ebe92043ea036fe16a973a752c1cb985cde"
 }

@@ -1,9 +1,8 @@
-# Print assets
+# Current print assets
+build_current.py generates the ten starter card faces in cards/ from source-snapshot.json and assets/heroes/current. The native character template is character-card-template.pdf. The generator composes tactics, objectives, equipment, Recruits, queue pieces, holders and tokens with the same glyphs and typography.
 
-The cards/ folder contains approved 3 November 2026 raster faces copied from the prototype's public/cards output for a self-contained print build. The ten starter faces match the live sheet's identity, stats, costs and ability fields as checked 4 November. Cancel faces are drawn from the empty template with current combat wording by the print generator; their old raster versions are excluded.
+icons/ contains the current print glyphs and tactic frame. Element masters are fire.png, water.png, earth.png and wind.png: triangle frames, pale matching interiors and transparent exterior. Fire uses red/pink, Water deep cobalt/powder blue, Earth brown/sand and Wind purple/lavender. Equipment art is in assets/equipment.
 
-icons/ contains only the approved glyphs and empty tactic frame needed by the current print generator. Hero portrait masters remain in assets/heroes/current. Equipment masters remain in assets/equipment/*-v2.png. No alternate character art is introduced.
+action-track-watercolor-paper.png is the approved near-white warm ivory watercolor-paper texture, generated 4 November 2026 with pale sage/slate washes, ochre corner accents and fine grain. AP/RAP and section lines are rendered separately for legibility.
 
-action-track-watercolor-paper.png was generated using the built-in image-generation tool on 4 November 2026. Prompt: flat wide near-white warm ivory cold-pressed watercolor paper; subtle fine fibers and granulation; very pale sage/slate-blue edge washes and ochre corners; sparse graphite corner hairlines; center 85 percent uncluttered; no objects, text, symbols, borders, shadows or perspective; landscape 3:1, ink economical. AP/RAP labels and section dividers are vector text and lines added by the PDF generator.
-
-Element icons revised with built-in image generation: preserve triangle frame and glyph silhouette, pale matching triangle fill, transparent exterior; Fire red/peach-pink, Water deep cobalt/powder blue, Earth brown/sand, Wind purple/lavender. Current element masters are icons/fire.png, water.png, earth.png and wind.png. The print generator uses these consistently in every tactic, holder and legend.
+Element masters were edited with the built-in image generator to preserve glyph silhouettes and triangle frames while applying the matching pale fills and updated Water/Wind colors.

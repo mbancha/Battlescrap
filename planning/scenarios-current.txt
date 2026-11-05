@@ -1,0 +1,29 @@
+Moonfall Tactics — Scenarios
+
+Three Fires
+
+Each scenario uses a map plus its own deployment/spawning edges, special rules, VP sources and victory threshold or explicit VP payout. A map can support multiple scenarios and multiple group spawning edges; scenario rules specify which are active. Scenario configuration defines victory.
+
+Three Fires: water/north scores 1 VP at the start of each of its own turns, regardless of bonfire control. Stone/south scores 1 VP PER bonfire it controls at the start of each of its own turns. Control means more adjacent friendly units than enemy units; ties are uncontrolled. First to 15 VP wins; check immediately after every award. 1 VP per enemy defeat and no friendly-fire VP.
+
+Random setup: every map has nine X locations. For this map shuffle four traps and five Moonstone tokens randomly onto the Xs, all visible before play.
+
+Any movement into a trap deals 1 damage, then removes it. Any movement into fire deals 1 damage; ending a character’s turn there also deals 1 damage. Resolve each entry separately, including voluntary and forced movement, stopping if defeated. Fire hexes are enterable. TEST recruit timing: fire end-turn damage applies to recruits that acted during that friendly turn. Moving an idle hero by an ability is not itself ending its activation.
+
+Deployment: use the chosen north blue or south stone zone. Every full hex in that zone is eligible if otherwise legal; a few pixels of map alignment error are acceptable. Half hexes are never eligible. If the zone is full, use the nearest legal empty overflow hex.
+
+Battlefield modifiers
+
+After the first scenario, roll a d6 once at scenario setup, after revealing traps and Moonstones. The result lasts for that scenario. Modifier rules appear in the scenario reference.
+
+1 Plague: at faction turn end, each living unit adjacent to at least one poisoned living unit gains 1 Poison. Snapshot sources simultaneously. TEST timing.
+
+2 Wind: roll one fixed axial direction at setup. Each friendly unit may take one optional free {hex:1} step that direction per own turn; normal occupancy and entry hazards apply.
+
+3 Storm: ranged attacks have −1 Attack die.
+
+4 Snow: ordinary Move allowance is reduced by {hex:1}, minimum zero; fixed ability/tactic movement is unchanged (TEST).
+
+5 Heat: gaining Enraged from zero adds exactly 1 extra; add the extra once.
+
+6 Moonfall: at setup add one Moonstone to a random legal full adjacent hex per trap; stones may stack.

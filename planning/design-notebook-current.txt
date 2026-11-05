@@ -1,0 +1,29 @@
+Design notebook
+
+Working ideas for the next design iteration
+
+World
+
+The moon is disintegrating and raining fragments onto Surlune. Days are short and nights long beneath a huge bright moon. People feel drawn to moonlight; its relationship to energy and intelligence is part of the setting’s mystery.
+
+Explore the sun as life and the moon as intelligence or soul, the importance of lunar phases, and how Moonstone changes living things. Questions include whether Moonstone has intelligence and what happens when it is eaten, crushed, left on the ground, or exposed to sunlight and different lunar phases.
+
+Cover composition: the breaking moon rains glittering fragments across a battlefield where a few heroes face one another. Use the established graphite/watercolor direction.
+
+Regional design studies
+
+Design regional abilities to combine with the starter heroes.
+
+Magyara: a ruler claims godlike rank and enforces a strict hierarchy. Heroes carry ranks 1–6 as chevrons; lower ranks excel at direct combat, higher ranks command. Ability study: once per turn, give lower-ranked Magyara heroes within five hexes one Dazed or Focus; when there are none, draw two tactics.
+
+Aztex: steam-powered step temples, dangerous labor and ritual industry. Ability study: at activation start, wound each adjacent Recruit.
+
+Juungla: jungle trackers, puma riders, boas and poisons. Ability study: +2 Attack against a damaged target; supporting heroes use Poison and direct damage against full-health enemies.
+
+Campaign exploration
+
+Explore neutral dangers and cooperative or semi-cooperative mission twists. A connected world map gradually reveals sticker regions; starting and completed artwork should align at sticker edges. Begin in a corner and branch into wider destination choices, with complexity increasing along the route.
+
+Ability studies
+
+Explore effects conditioned on relative queue position, having hit an enemy this turn, or adjacency to a Recruit; an adjacent-Recruit stomp; AP gained on a hit; alternate status/HP payment; and dice-pattern triggers.

@@ -1,13 +1,12 @@
-# Battlescrap continuation
-Read START-HERE.md, ARCHITECTURE.md, SOURCE_AUDIT.md and DECISIONS.md. This is the dedicated Battlescrap repository. Every new game must start in its own repository, copying and adapting relevant BG-Prototypes architecture. Current implementation is **shared-elements-v15**, schema 2.
+# Moonfall Tactics working instructions
+Read START-HERE.md, ARCHITECTURE.md, SOURCE_AUDIT.md and DECISIONS.md. This dedicated repository owns the game.
 
-The live Battlescrap spreadsheet is authoritative for hero identities, stats, costs, effects, availability and regional wording. Read Heroes, Regions and the card-content tabs before coding and before delivery. Match stable IDs and header names, preserve designer edits, and capture a versioned implementation snapshot. Flag conflicting sheet entries instead of silently substituting old values.
+The Design Draft owns rules, world, visual direction and the design notebook. The Build Specification owns the Sol plan and acceptance. The live spreadsheet owns hero identities, stats, prices, effects and availability. Read its Heroes, Regions and card tabs by stable ID/header before content changes; record source revisions and preserve designer edits. Keep Google files in the existing game folder and approved visual masters under assets/.
 
-The Design Draft owns general rules and its Rules Quick Sheet tab is the concise player reference. The Build Specification owns contracts and acceptance. Keep Google files in the existing Battlescrap folder; approved art masters under assets/. Current implementation and source checks are documented in ARCHITECTURE.md, DECISIONS.md, SOURCE_AUDIT.md and VERIFICATION.md.
+Use concise current-state prose, first-person hero effects and consistent icons. Generate actual card-face images for player decisions, with accessible transcriptions and separate controls/live state. Follow the current Build Specification for exact layout, palette, print dimensions and opponent-card reveals.
 
-Keep games standalone. State and RNG must serialize; UI, tests and bots share authoritative legal actions. Preserve private hands, bids and deck order. Keep tunable values in src/data/config.ts and hero content in the snapshot. Current spatial text uses {hex:x}, rendered as a cream/black flat-top distance hex with accessible text. Hero abilities use first-person wording.
+State and RNG serialize. UI, bots and tests share authoritative legal actions and player projections. Keep tunable values in src/data/config.ts and component data in snapshots. Record active TEST rulings in DECISIONS.md. Resolve routine implementation details within the authorized task and identify material rule contradictions precisely.
 
-Label provisional rulings TEST and unfinished design OPEN. Ask numbered questions before substantial ambiguous rule changes unless the user has already authorized defaults. Preserve approved art and incomplete regional entries; do not present historical print PDFs as current. Do not publish publicly without scope.
+Inspect icons together at play size and in grayscale. Use shared frames, distinct silhouettes, pale matching colors and countable quantities. Review actual cards, board and queue together. Keep current documentation in place and use Git for revision history.
 
-Run tests/build, assets, simulation and current browser acceptance after relevant code changes. Record actual evidence and limits; tests do not certify balance or total absence of defects.
-
+Run the checks appropriate to the change. Record actual rules, build, assets, simulation, browser and print evidence in VERIFICATION.md. Publish the authorized scope while preserving existing local work.

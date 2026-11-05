@@ -1,15 +1,10 @@
 # Moonfall Tactics print and play
-Current kit: 16 US Letter pages. Print single-sided at 100% / Actual size with automatic page rotation.
+[Complete 16-page kit](current/Moonfall-Tactics-print-and-play.pdf) · [Action tracks](current/06-action-queue.pdf)
 
-- One bullet-point rules sheet with a pictorial legend.
-- Both action queues on one landscape page; each section is 3 x 1 inches.
-- Ten character cards and two Recruit cards on two sheets.
-- Ten compact 1.25 x 1.75 inch queue cards.
-- Eight 2.25 x 2.75 inch holders with half-inch margins and bottom faction/element symbols.
-- Ten folding character standees, 36 tactics, six objectives and fourteen equipment reminders.
-- Five statuses, traps and Moonstones, plus a 0-20 VP track.
-- Original map on two sheets.
+Print US Letter, single-sided, at 100% / Actual size with automatic page rotation.
 
-Rebuild with python print-and-play/build_current.py, then python print-and-play/verify_current.py.
-The native template is assets/print/character-card-template.pdf; character faces are regenerated from sheet data with live text and icons.
-Older pdf/ files and build.py are historical.
+The kit contains a one-page bulleted reference and pictorial icon legend; ten character cards with two 1-HP Recruit cards; 36 tactics; six objectives; fourteen equipment/upgrade reminders; two map halves; both queues; ten queue portraits and the two-row 0–20 VP track; ten folding standees; five statuses, traps and Moonstones; and eight faction/element holders.
+
+Both queues share a landscape sheet with 3 × 1 inch sections. Queue cards measure 1.25 × 1.75 inches. Holders measure 2.25 × 2.75 inches with half-inch margins, 1 cm faction borders and symbols in the bottom half inch. Map halves retain 1 mm top/bottom margins. Standees are 1.25 × 5 inches unfolded.
+
+Rebuild with python print-and-play/build_current.py, then python print-and-play/verify_current.py. Source data is in source-snapshot.json; the native character template is assets/print/character-card-template.pdf. Current portraits and triangular element icons are shared with generated pieces.

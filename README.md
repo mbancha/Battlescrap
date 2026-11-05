@@ -1,39 +1,19 @@
-[Play Moonfall Tactics](https://mbancha.github.io/Moonfall-Tactics/) · [Character gallery](assets/heroes/index.html)
-
-Standalone repository with Moonfall Tactics history extracted from BG-Prototypes. Current portraits use the class-color watercolor direction in the live Design Draft. Primary class is on the left, subclass on the right. Kalawi's Striker/Scout art pairing is provisional because his current class fields are blank.
-
 # Moonfall Tactics
-A local tabletop skirmish prototype using **shared-elements-v15**. Play Three Fires with three heroes per faction, or the four-hero shared-faction team test.
+[Play](https://mbancha.github.io/Moonfall-Tactics/) · [Print and play](print-and-play/current/Moonfall-Tactics-print-and-play.pdf)
 
-## Run
-```powershell
-npm.cmd ci
-npm.cmd run dev -- --host 127.0.0.1
-```
-Open Vite’s local address. Choose human/bot, hotseat or watch bots. Bid, choose heroes, receive randomly assigned elements, purchase equipment, then deploy by clicking highlighted full hexes. Select a queue portrait to activate; select a piece and a highlighted hex to move, or choose Attack and a target. Click a tactic to choose its printed effect or a matching-element hero ability. Private hotseat handoffs hide both hands.
+Tactical fantasy skirmishes on asymmetric hex maps, using a shared action queue and element tactics. Normal play fields three heroes and three 1-HP Recruits per faction; the shared-faction team test uses four heroes.
 
-The in-app **How to play** reference explains the current rules. Export/import private saves or replays; these files contain hidden information. Older saves are rejected rather than reinterpreted.
+## Sources
+- [Design Draft](https://docs.google.com/document/d/1PlwHc5BWQdSv77xgSlSmNEiZIhgJ40cii22NKibvcFM): current rules, quick sheet, scenarios, visual direction and design notebook.
+- [Component sheet](https://docs.google.com/spreadsheets/d/1hfWFhxm-Su-qtR_hVrzFt6GBW1ure8W4xmp1o8hF-Rg/edit): hero and card definitions.
+- [Sol Build Specification](https://docs.google.com/document/d/16-weAaDa4W7e4gC2jeiv_NN0cSAS_bcd_WATxPcDSAU): digital implementation plan and acceptance; [offline readback](planning/build-spec-current.txt).
+- [Architecture](ARCHITECTURE.md), [active rulings](DECISIONS.md), [source audit](SOURCE_AUDIT.md) and [verification](VERIFICATION.md).
 
-## Sources of truth
-- [Design Draft and Rules Quick Sheet](https://docs.google.com/document/d/1PlwHc5BWQdSv77xgSlSmNEiZIhgJ40cii22NKibvcFM): general rules; second tab is the general player reference; scenario details have their own tab.
-- [Hero spreadsheet](https://docs.google.com/spreadsheets/d/1hfWFhxm-Su-qtR_hVrzFt6GBW1ure8W4xmp1o8hF-Rg/edit): identities, stats, abilities, availability and regional wording.
-- [Build Specification](https://docs.google.com/document/d/16-weAaDa4W7e4gC2jeiv_NN0cSAS_bcd_WATxPcDSAU): contracts, provisional rulings and acceptance.
-- `src/data/hero-snapshot.json` is the implementation snapshot. `planning/` contains offline document readbacks.
+## Run and verify
+Run npm ci, then npm run dev -- --host 127.0.0.1. On Windows use npm.cmd as needed.
+Checks: npm test, npm run build, npm run assets, npm run sim, npm run smoke. Browser checks use installed Chrome or CHROMIUM_PATH.
 
-## Checks
-```powershell
-npm.cmd test
-npm.cmd run build
-npm.cmd run assets
-npm.cmd run sim
-npm.cmd run smoke
-```
-Browser checks use installed Chrome by default; set CHROMIUM_PATH for another Chromium executable. Evidence and limits are in [VERIFICATION.md](VERIFICATION.md). Tests establish specified behavior, not balance.
+## Print
+The [16-page Letter kit](print-and-play/current/Moonfall-Tactics-print-and-play.pdf) includes current cards, map, both action queues, queue cards with VP track, standees, tokens and holders. [Print details](print-and-play/README.md).
 
-Bisti’s dedicated current portrait is included. Incomplete regional heroes are unavailable. Team mode shares faction resources and control; separate networked seats and campaign travel/recruitment offers are future work.
-
-## Print and play
-[Current 16-page kit](print-and-play/current/Moonfall-Tactics-print-and-play.pdf) · [Single-sheet action tracks](print-and-play/current/06-action-queue.pdf) · [Printing instructions](print-and-play/README.md)
-
-Updated 4 November 2026 with the current watercolor visuals, both player-count tracks, two starting tactics and one tactic per objective. The [Sol plan](planning/sol-update-2026-11-04.md) records current local changes and remaining runtime/data discrepancies; this print release does not certify that all local prototype changes are deployed.
-
+The Sol plan brings the current local digital version into alignment with these components, including complete card-face images and a one-second central opponent-card reveal.
