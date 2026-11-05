@@ -2,16 +2,16 @@
   "date": "2026-11-04",
   "files": [
     "00-rules-and-legend.pdf",
-    "06-action-queue.pdf",
     "01-tableau-cards.pdf",
-    "02-portrait-cards.pdf",
-    "02-folding-standees.pdf",
     "03-tactics.pdf",
-    "04-tokens.pdf",
-    "05-ownership-holders.pdf",
     "07-objectives.pdf",
     "09-equipment.pdf",
-    "10-map.pdf"
+    "10-map.pdf",
+    "06-action-queue.pdf",
+    "02-portrait-cards.pdf",
+    "02-folding-standees.pdf",
+    "04-tokens.pdf",
+    "05-ownership-holders.pdf"
   ],
   "pages": 16,
   "queue_ap_rap": {

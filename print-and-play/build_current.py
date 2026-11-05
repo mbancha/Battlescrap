@@ -241,7 +241,7 @@ def recruit(c,r,w,h):
 
     img(c,ASSETS/'factions'/(r['id'].lower()+'.png'),w/2-40,h-125,80,80,True)
 
-    for i in range(2):icon(c,'health',w/2-22+i*23,95,22)
+    icon(c,'health',w/2-11,95,22)
 
     for key,val,x in [('move',3,30),('melee',2,78),('defense',2,126)]:
 
@@ -344,13 +344,13 @@ def standees():
 
 def map_pdf():
 
-    im=Image.open(ASSETS/'maps/three-fires-2026-10-21.png');fw=750*im.width/im.height
+    im=Image.open(ASSETS/'maps/three-fires-2026-10-21.png');fh=792-2*72/25.4;fw=fh*im.width/im.height
 
     c=pdf('10-map.pdf')
 
     for i in range(2):
 
-        x=(612-fw/2)/2;c.saveState();p=c.beginPath();p.rect(x,21,fw/2,750);c.clipPath(p,stroke=0,fill=0);img(c,ASSETS/'maps/three-fires-2026-10-21.png',x-i*fw/2,21,fw,750);c.restoreState();c.showPage()
+        x=(612-fw/2)/2;c.saveState();p=c.beginPath();p.rect(x,72/25.4,fw/2,fh);c.clipPath(p,stroke=0,fill=0);img(c,ASSETS/'maps/three-fires-2026-10-21.png',x-i*fw/2,72/25.4,fw,fh);c.restoreState();c.showPage()
 
     c.save()
 
@@ -364,7 +364,7 @@ def rules():
 
     ('Turn','Score scenario VP; check victory. Each friendly poisoned unit takes 1 damage and removes 1 Poison. Choose a hero, capture AP/RAP, move its queue card to slot 0. All slots are usable.'),
 
-    ('Actions','AP pays for the active hero or Recruits; RAP only Recruits. Each hero action separately costs 1/2/3... AP; each Recruit shares one counter across paid actions. Respawn never resets costs.'),
+    ('Actions','Recruits have 1 HP. AP pays for the active hero or Recruits; RAP only Recruits. Each hero action separately costs 1/2/3... AP; each Recruit shares one counter across paid actions. Respawn never resets costs.'),
 
     ('Abilities','Discard a matching assigned-element tactic and pay printed AP. Paid repeats cost +1 AP; card-only repeats stay card-only. Ongoing effects last until the next activation or defeat unless stated otherwise.'),
 
@@ -447,6 +447,8 @@ def main():
 
     grid('09-equipment.pdf',(rows('Equipment')+upgrades)*2,equipment,180,144,3,5);map_pdf()
 
+    order=['00-rules-and-legend.pdf','01-tableau-cards.pdf','03-tactics.pdf','07-objectives.pdf','09-equipment.pdf','10-map.pdf','06-action-queue.pdf','02-portrait-cards.pdf','02-folding-standees.pdf','04-tokens.pdf','05-ownership-holders.pdf']
+    FILES[:]=order
     writer=PdfWriter()
 
     for f in FILES:writer.append(OUT/f)
