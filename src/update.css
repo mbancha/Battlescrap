@@ -45,3 +45,6 @@
 
 .opponent-card-reveal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#15202b66;pointer-events:all}.opponent-card-reveal img{height:min(75vh,560px);max-width:90vw;object-fit:contain;box-shadow:0 8px 32px #0008}.public-card-history .printed-card{width:180px}.equipment-card{object-fit:contain;height:auto;max-width:180px}
 .simulation dl{display:grid;grid-template-columns:repeat(3,minmax(100px,1fr) minmax(55px,.4fr));gap:12px;align-items:baseline}.simulation dd{margin:0;font-weight:bold}.simulation table{width:100%}@media(max-width:800px){.simulation dl{grid-template-columns:1fr auto}}
+
+/* Battlefield uses its natural aspect ratio; decisions never shrink combat. */
+.table{display:grid;grid-template-columns:minmax(0,1fr) 300px;align-items:start}.board-section{min-width:0}.board-scroll{overflow:auto!important;max-height:none!important}.board-scroll svg,.combat-open .board-scroll svg{width:100%!important;height:auto!important;max-height:none!important;min-height:0!important;display:block}.board-scroll:focus-within{outline:2px solid #af8950}@media(max-width:1200px){.table{grid-template-columns:1fr}}

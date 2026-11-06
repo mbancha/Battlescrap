@@ -1,0 +1,1 @@
+Generated imports from the committed source snapshot. Numeric engine fields remain typed in JSON. Import family CSV files into Dextrous and install variables.csv; icon library paths require uploading assets/print/icons under Moonfall/icons. A real Dextrous template/style pilot and linked-sheet refresh remain unverified. Do not treat these exports as independently authored data.

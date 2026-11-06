@@ -1,4 +1,4 @@
-export const RULES={version:'card-images-v16',budget:15,teamBudget:20,startingRecruits:3,hand:2,handLimit:8,target:15,
+export const RULES={version:'shields-v17',budget:21,teamBudget:28,startingRecruits:3,hand:2,handLimit:8,target:15,
  queue3:[[1,1],[2,1],[3,1],[3,2],[4,3],[5,2]],
  queue4:[[1,1],[2,1],[2,2],[3,1],[3,2],[4,2],[4,3],[5,2]],
  baseRP:10,victoryRP:1,stoneRP:2,rerollPP:1,

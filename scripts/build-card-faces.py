@@ -25,5 +25,14 @@ for key,name,cost,stat in [('boots','Boots',2,'Move'),('shield','Shields',3,'Def
 for row in module['HEROES']:
     identifier=row['ID'];manifest[identifier]={'face':'./cards/'+identifier+'.png','width':180,'height':252,'label':row['Name'],'text':row['Ability effect'],'sha256':hashlib.sha256((out/(identifier+'.png')).read_bytes()).hexdigest()}
 for i,row in enumerate(module['rows']('Objectives')):face('objective-'+str(i),dict(row,index=i),module['objective'])
+for identifier,card in manifest.items():
+    from PIL import Image
+    card['pixelWidth'],card['pixelHeight']=Image.open(out/(identifier+'.png')).size
 (out/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
 print('Generated',len(manifest),'complete card faces')
+
+# Release provenance is recomputed from current inputs, independently of image hashes.
+inputs=['src/data/hero-snapshot.json','print-and-play/source-snapshot.json','print-and-play/build_current.py','scripts/build-card-faces.py']
+inputs += [str(p.relative_to(root)).replace('\\','/') for p in sorted((root/'assets/print/icons').glob('*'))]
+provenance={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in inputs}
+(out/'sources.json').write_text(json.dumps(provenance,indent=2),encoding='utf8')

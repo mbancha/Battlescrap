@@ -48,7 +48,7 @@ export function owner(s:State){const ov=s.players.findIndex((p:any)=>p.hand.leng
 
 function blocked(s:State,a:string,b:string){return board.walls.includes([a,b].sort().join('|'))||s.terrain.some((t:any)=>t.hex===b&&t.kind==='structure');}
 
-export function reachable(s:State,u:any,n:number){if(!u?.hex||n<=0)return [];if(u.fly)return board.hexes.filter(h=>distance(u.hex,h.id)>0&&distance(u.hex,h.id)<=n&&!blocked(s,u.hex,h.id)&&!on(s).some((v:any)=>v.hex===h.id)).map(h=>h.id);const seen=new Set([u.hex]),front=[{h:u.hex,d:0}],result:string[]=[];const occupied=new Set(on(s).filter((x:any)=>x.id!==u.id).map((x:any)=>x.hex));for(let i=0;i<front.length;i++){const {h,d}=front[i];if(d>=n)continue;for(const v of board.hexes)if(!seen.has(v.id)&&distance(h,v.id)===1&&!blocked(s,h,v.id)&&!occupied.has(v.id)){seen.add(v.id);front.push({h:v.id,d:d+1});result.push(v.id);}}return result;}
+export function reachable(s:State,u:any,n:number){if(!u?.hex||n<=0)return [];if(u.fly||def(u).fly)return board.hexes.filter(h=>distance(u.hex,h.id)>0&&distance(u.hex,h.id)<=n&&!blocked(s,u.hex,h.id)&&!on(s).some((v:any)=>v.hex===h.id)).map(h=>h.id);const seen=new Set([u.hex]),front=[{h:u.hex,d:0}],result:string[]=[];const occupied=new Set(on(s).filter((x:any)=>x.id!==u.id).map((x:any)=>x.hex));for(let i=0;i<front.length;i++){const {h,d}=front[i];if(d>=n)continue;for(const v of board.hexes)if(!seen.has(v.id)&&distance(h,v.id)===1&&!blocked(s,h,v.id)&&!occupied.has(v.id)){seen.add(v.id);front.push({h:v.id,d:d+1});result.push(v.id);}}return result;}
 
 export function movementPath(s:State,u:any,to:string){if(!u?.hex||u.hex===to)return [u?.hex];const queue=[[u.hex]],seen=new Set([u.hex]);for(let i=0;i<queue.length;i++){const path=queue[i],h=path[path.length-1];for(const v of board.hexes)if(!seen.has(v.id)&&distance(h,v.id)===1&&!blocked(s,h,v.id)&&!on(s).some((x:any)=>x.id!==u.id&&x.hex===v.id)){const p=[...path,v.id];if(v.id===to)return p;seen.add(v.id);queue.push(p);}}return [];}
 
@@ -70,7 +70,7 @@ export function heal(s:State,u:any,n:number){if(!u?.hex)return;u.wounds=Math.max
 
 function hazard(s:State,u:any,killer?:number){if(!u.hex)return;if(s.traps.includes(u.hex)){s.traps.splice(s.traps.indexOf(u.hex),1);damage(s,u,1,killer);}if(u.hex&&board.controls.includes(u.hex))damage(s,u,1,killer);}
 
-function moveUnit(s:State,u:any,to:string,voluntary=true){const path=u.fly?[u.hex,to]:movementPath(s,u,to);for(const h of path.slice(1)){u.hex=h;hazard(s,u);if(!u.hex||s.phase==='results')break;}if(voluntary&&u.hex&&!u.hero&&on(s).some((v:any)=>v.owner===u.owner&&v.hero==='h04'&&v.turnBuff)&&on(s).some((e:any)=>e.owner!==u.owner&&distance(e.hex,u.hex)===1))draw(s,u.owner,'heroAbility');}
+function moveUnit(s:State,u:any,to:string,voluntary=true){const path=(u.fly||def(u).fly)?[u.hex,to]:movementPath(s,u,to);for(const h of path.slice(1)){u.hex=h;hazard(s,u);if(!u.hex||s.phase==='results')break;}if(voluntary&&u.hex&&!u.hero&&on(s).some((v:any)=>v.owner===u.owner&&v.hero==='h04'&&v.turnBuff)&&on(s).some((e:any)=>e.owner!==u.owner&&distance(e.hex,u.hex)===1))draw(s,u.owner,'heroAbility');}
 
 function queueShift(s:State,id:string){const i=s.queue.indexOf(id);if(i>=0){s.queue.splice(i,1);s.queue.unshift(id);}}
 
@@ -92,7 +92,7 @@ export function compare(a:number[],d:number[]){const am=Math.max(...a),dm=Math.m
 
 export function pools(s:State){const c=s.combat,a=unit(s,c.attacker),d=unit(s,c.defender),data=c.override||def(a),ranged=data.range>1;
 
- let at=(c.override?data.attack:stat(s,a,'attack'))+a.focus+c.bonus,de=stat(s,d,'defense')+d.fortified-d.daze+c.defBonus;
+ let at=(c.override?data.attack:stat(s,a,'attack'))+a.focus+c.bonus,de=stat(s,d,'defense')+((c.override?.pierce||(c.basic&&def(a).pierce))?0:d.fortified)-d.daze+c.defBonus;
 
  if(c.basic&&s.players[a.owner].items[a.hero]==='weapon')at++;
 
@@ -112,7 +112,7 @@ function recordAttack(s:State,a:any,d:any){if(a.owner!==s.side)return;for(const 
 
 function roll(s:State){const c=s.combat,a=unit(s,c.attacker),d=unit(s,c.defender),[at,de]=pools(s);
 
- c.old={focus:a.focus,enraged:a.enraged,fortified:d.fortified,daze:d.daze};c.heavy=(c.override?.heavy||0)+(on(s).some((u:any)=>u.owner===a.owner&&u.hero==='h13'&&u.id!==a.id&&u.abilityActive&&distance(u.hex,a.hex)===1)?2:0);
+ c.old={focus:a.focus,enraged:a.enraged,fortified:d.fortified,daze:d.daze};c.heavy=(c.override?.heavy||0)+(c.basic?(def(a).heavy||0):0)+(on(s).some((u:any)=>u.owner===a.owner&&u.hero==='h13'&&u.id!==a.id&&u.abilityActive&&distance(u.hex,a.hex)===1)?2:0);
 
  const pool=(n:number)=>n?Array.from({length:n},()=>die(s)):[Math.min(die(s),die(s))];
 
@@ -124,7 +124,7 @@ function rememberRoll(s:State){const c=s.combat;s.lastRoll={serial:++s.rollSeria
 
 function resolveCombat(s:State){const c=s.combat,a=unit(s,c.attacker),d=unit(s,c.defender),r=compare(c.attackDice,c.defenseDice);a.focus=Math.max(0,a.focus-c.old.focus);a.enraged=Math.max(0,a.enraged-c.old.enraged);d.fortified=Math.max(0,d.fortified-c.old.fortified);d.daze=Math.max(0,d.daze-c.old.daze);
 
- const amount=Math.min(c.override?.light??Infinity,1+r.attackSixes+c.old.enraged+c.heavy+c.extraDamage);
+ const amount=Math.min(c.override?.light??Infinity,Math.max(0,1+Math.max(0,r.attackSixes-1)+c.old.enraged+c.heavy+c.extraDamage-((c.override?.pierce||(c.basic&&def(a).pierce))?0:(def(d).shields||0))));
 
  s.log.push(label(s,a.id)+' '+(r.hit?'hits for '+amount:'blocked')+' Â· ['+c.attackDice+'] / ['+c.defenseDice+']');
 
@@ -321,7 +321,7 @@ export function applyAction(state:State,a:Action):string|null{const s=clone(stat
 
 export const dispatch=applyAction;
 
-function execute(s:State,a:Action){if(['card','response','cancel'].includes(a.type))metric(s,'tacticPlays');if(['effectMove','wind'].includes(a.type))metric(s,'freeMoves');if(['assaultAttack','counterAttack'].includes(a.type))metric(s,'freeAttacks');if(a.type==='activate')metric(s,'activations:'+unit(s,a.unit).hero);const p=s.players[s.side],who=owner(s);switch(a.type){
+function execute(s:State,a:Action){if(['card','response','cancel'].includes(a.type))metric(s,'tacticPlays');if(['effectMove','wind'].includes(a.type))metric(s,'freeMoves');if(['assaultAttack','counterAttack','cardTarget'].includes(a.type))metric(s,'freeAttacks');if(a.type==='activate')metric(s,'activations:'+unit(s,a.unit).hero);const p=s.players[s.side],who=owner(s);switch(a.type){
 
  case 'selection':break;
 

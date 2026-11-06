@@ -1,0 +1,5 @@
+﻿Nickname,Copies,ID,Name,Element / faction,Copies / cost,Card text,Digital implementation notes
+boots,1,boots,Trail Boots,Either,1 PP,+$mt_distance[1] Move (maximum 7).,Reject ineffective purchase. TEST price; one item/hero and copy/faction. Keep on respawn; refund on preparation deselection.
+shield,1,shield,Bellmetal Shield,Either,2 PP,+1 Defense die versus melee.,Melee defense only. TEST price; one item/hero and copy/faction. Keep on respawn; refund on preparation deselection.
+weapon,1,weapon,Balanced Weapon,Either,2 PP,+1 basic Attack die.,Does not boost ability attacks. TEST price; one item/hero and copy/faction. Keep on respawn; refund on preparation deselection.
+lens,1,lens,Sighting Lens,Either,2 PP,+$mt_distance[1] ordinary ranged attack range.,No exact/fixed ability range extension. TEST price; one item/hero and copy/faction. Keep on respawn; refund on preparation deselection.

@@ -194,6 +194,12 @@ def hero(c,h,w,ht):
 
         icon(c,key,10,y,24);text(c,val,22,y+7,11,'Title',True)
 
+    for i in range(int(h.get('Shields',0))):icon(c,'shield',134,194-i*14,14)
+
+    if h.get('Movement keywords'):text(c,h['Movement keywords'],10,168,7)
+
+    if h.get('Basic attack keywords'):text(c,h['Basic attack keywords'],64,84,7)
+
     for i in range(int(h['HP'])):icon(c,'health',151,194-i*14,14)
 
     text(c,h['Region'],10,115,7)
@@ -372,7 +378,9 @@ def rules():
 
     ('Dice','Highest die wins; compare six counts only when both maxima are 6; attacker wins ties. Zero pool: roll two, keep lower. Attacker may reroll own dice for 1 banked compensation PP each.'),
 
-    ('Damage','Hit: 1 + kept attacker sixes + Enraged + Heavy Attack + declared bonuses; apply Light Attack cap last. Winning defender gains Focus per kept six.'),
+    ('Shields / Pierce','Shields reduce attack damage by 1 each. Pierce ignores Shields and discards Fortified without its bonus.'),
+
+    ('Damage','Hit: 1 + kept attacker sixes after the first + Enraged + Heavy Attack + declared bonuses; apply Light Attack cap last. Winning defender gains Focus per kept six.'),
 
     ('Position','Melee: +1 die per qualifying adjacent ally. Ranged: -2 when engaged and -2 beyond normal range, up to double; penalties stack. Exact range never extends.'),
 
