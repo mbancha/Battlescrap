@@ -18,3 +18,29 @@
 .queue-card{grid-template-rows:38px 26px;gap:0!important}.queue-card>.portrait{grid-row:1;grid-column:1;height:36px!important}.queue-card>b{grid-row:1;grid-column:2;margin:0}.queue-card>.element{grid-row:2;grid-column:1}.queue-card>.health{grid-row:2;grid-column:2;margin:0}.track-reward{height:22px}.queue-card .health b{font-size:12px}
 
 .roll-bar{touch-action:none;width:100%;min-height:44px;background:linear-gradient(90deg,#433626,#987744);cursor:ew-resize}.prompt{font-size:.85rem;padding:.5rem}aside details[open]{max-height:360px;overflow:auto}
+
+.printed-card{display:block;width:100%;height:auto;object-fit:contain;border-radius:6px}.battle-card:has(.printed-card){padding:0;width:180px;min-width:150px;background:transparent}.battle-card>.printed-card{width:100%;height:auto}.objectives article:has(.printed-card){width:180px;padding:0}.inspector>.printed-card{max-width:270px;margin:auto}.alt-card>.printed-card,dialog>.printed-card{width:300px;max-width:100%;margin:auto}.alt-card:has(.printed-card){max-height:90vh;overflow:auto}
+
+.app{height:auto!important;min-height:100dvh;overflow:visible!important}
+.hand{height:auto!important;max-height:none!important;overflow:visible!important;flex-shrink:0;padding:12px!important}
+.hand .cards{display:flex!important;flex-wrap:wrap!important;align-items:flex-start;overflow:visible!important;gap:10px!important}
+.hand .battle-card{flex:0 0 180px!important;width:180px!important;min-width:180px!important;height:auto!important;min-height:0!important;overflow:visible!important;padding:0!important}
+.hand .objectives{display:flex!important;position:static!important;gap:12px;margin-top:8px}
+.hand .objectives article{flex:0 0 180px;width:180px}
+.game-glyph{display:inline-block;width:28px;height:28px;object-fit:contain;vertical-align:middle}
+.element{background:transparent!important;border:0!important}.element .game-glyph{width:100%;height:100%}
+.icon .game-glyph,.status .game-glyph,.health .game-glyph{width:100%;height:100%}
+.hex-number,.resource-token{position:relative;display:inline-flex;align-items:center;justify-content:center;clip-path:none;background:none;border:0;width:40px;height:40px}
+.hex-number .game-glyph,.resource-token>.game-glyph,.resource-token>img{position:absolute;width:100%;height:100%;object-fit:contain}
+.hex-number>b,.resource-token>b{position:relative;z-index:1;color:#17252b;font-size:16px;font-weight:800;text-shadow:0 0 3px white,0 0 3px white}
+.resource-cards{width:30px;margin:0 6px}.resource-cards>b{background:#fff3d9;border-radius:50%;padding:2px}
+
+.combat-decision .cards{display:none!important}.table aside>.combat-decision{margin:8px 0}.gameplay-log{overflow:auto;max-height:300px}
+.rolling-dice{display:flex;gap:8px;padding:14px}.rolling-dice b{font-size:40px;animation:dice-jiggle .12s infinite alternate}.rolling-dice b:nth-child(2){animation-delay:.04s}.rolling-dice b:nth-child(3){animation-delay:.08s}
+@keyframes dice-jiggle{from{transform:rotate(-18deg) translateY(-5px)}to{transform:rotate(22deg) translateY(5px)}}
+
+.equipment-card{display:inline-flex;position:relative;flex-direction:column;align-items:center;box-sizing:border-box;width:140px;height:196px;padding:12px 12px 9px;background-color:#f3e5c9;background-position:center;background-size:100% 100%;color:#292720;font-family:Georgia,serif;border-radius:6px;vertical-align:top;text-align:center;line-height:1.2}.equipment-card>strong{font-size:13px;min-height:30px;display:flex;align-items:center;justify-content:center}.equipment-art{display:block;width:100%;height:82px;object-fit:contain;mix-blend-mode:multiply}.equipment-effect{font-size:12px;min-height:35px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}.equipment-price{margin-top:auto;font-size:12px}.equipment-card .icon{width:17px;height:17px}.equipment-card .hex-number{width:22px;min-width:22px;height:22px}.equipment-card .hex-number svg{width:22px;height:22px}.equipment-purchase{display:inline-flex;flex-direction:column;align-items:center;background:transparent;padding:0;border:0;margin:5px;vertical-align:top}.equipment-owner{font-size:12px;max-width:140px;padding:5px}.alt-card .equipment-card{margin-top:8px}
+
+.equipment-card::before{content:"";position:absolute;inset:37px 5px 8px;background:#f3e5c9}.equipment-card>strong,.equipment-art,.equipment-effect,.equipment-price{position:relative;z-index:1}.equipment-card>strong{flex-shrink:0}.equipment-art{height:78px;flex-shrink:0}.equipment-effect{display:block;min-height:36px;font-size:11px;line-height:1.25;padding-top:3px}.equipment-card .equipment-price{margin-top:auto}
+
+.opponent-card-reveal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#15202b66;pointer-events:all}.opponent-card-reveal img{height:min(75vh,560px);max-width:90vw;object-fit:contain;box-shadow:0 8px 32px #0008}.public-card-history .printed-card{width:180px}.equipment-card{object-fit:contain;height:auto;max-width:180px}

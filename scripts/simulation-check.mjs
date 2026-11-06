@@ -1,0 +1,5 @@
+import {chromium} from 'playwright';
+import {preview} from 'vite';
+import assert from 'node:assert/strict';
+const server=await preview({preview:{host:'127.0.0.1',port:4185,strictPort:true}}),browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
+try{const page=await browser.newPage({viewport:{width:1366,height:900}});await page.goto('http://127.0.0.1:4185');await page.getByRole('button',{name:'Simulation lab',exact:true}).click();await page.getByLabel('Games',{exact:true}).fill('2');await page.getByRole('button',{name:'Run simulations',exact:true}).click();await page.getByText('Average per completed game',{exact:true}).waitFor({timeout:60000});assert.equal(await page.getByRole('columnheader',{name:'Hero',exact:true}).count(),1);await page.getByText('Tactic income per game',{exact:true}).waitFor();await page.screenshot({path:'artifacts/simulation-panel.png',fullPage:true});console.log('Simulation panel, hero table and game/source averages passed');}finally{await browser.close();await server.httpServer.close();}

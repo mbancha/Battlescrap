@@ -1,0 +1,13 @@
+import {it,expect} from 'vitest';
+import {newGame,draw,damage} from '../src/engine';
+import {gameSummary,summarize} from '../src/simulation';
+it('attributes actual draws and repeated defeat events',()=>{
+ const s=newGame(1,{simulation:true});s.deck=['Fire-attack:shared:0'];draw(s,0,'moonstone');draw(s,0,'objective');
+ expect(s.metrics['drawReceived:moonstone']).toBe(1);expect(s.metrics['drawRequested:objective']).toBe(1);expect(s.metrics['drawReceived:objective']).toBeUndefined();
+ const r={owner:0,index:0,hex:'5,4',wounds:0,tokens:{}};s.units.push(r);damage(s,r,1);damage(s,r,1);expect(s.metrics.recruitDeaths).toBe(1);r.hex='5,4';r.wounds=0;damage(s,r,1);expect(s.metrics.recruitDeaths).toBe(2);
+});
+it('reports individual heroes and completed-game denominators',()=>{
+ const games:any=[{complete:true,teams:[['h01','h03'],['h06']],winner:0,first:0,metrics:{turns:10,paidActions:4,tacticPlays:2,heroDeaths:1,recruitDeaths:3,'drawReceived:startingHand':4,'drawReceived:objective':2}},{complete:false,teams:[['h01'],['h06']],metrics:{turns:100}}];
+ expect(summarize(games).map(r=>r.id).sort()).toEqual(['h01','h03','h06']);expect(summarize(games).find(r=>r.id==='h01')?.rate).toBe(1);
+ expect(gameSummary(games)).toMatchObject({completed:1,unfinished:1,meanTurns:10,meanActions:6,meanHeroDeaths:1,meanRecruitDeaths:3,meanTacticsEarned:2});expect(gameSummary([]).meanTurns).toBe(null);
+});

@@ -12,7 +12,7 @@ Component authority: https://docs.google.com/spreadsheets/d/1hfWFhxm-Su-qtR_hVrz
 
 Read Heroes, Regions, Tactics, Objectives, Equipment, Battlefield modifiers and Scenarios by header and stable ID. Keep Google documents in the game’s existing folder, visual masters in assets/, and offline readbacks in planning/. Update this plan in place as work completes.
 
-The local implementation reports shared-elements-v15/schema 2. Its engine already includes many recent rules and UI updates. The prior 69-test run had 66 passes and three failures: two starting-hand expectations and one Recruit Poison expectation. Establish a fresh baseline; use the confirmed 2-card hand and 1-HP Recruit rules when correcting fixtures. Record actual commands, results and remaining limits in VERIFICATION.md.
+The current implementation uses card-images-v16/schema 2. Its engine already includes many recent rules and UI updates. The prior 69-test run had 66 passes and three failures: two starting-hand expectations and one Recruit Poison expectation. Establish a fresh baseline; use the confirmed 2-card hand and 1-HP Recruit rules when correcting fixtures. Record actual commands, results and remaining limits in VERIFICATION.md.
 
 1. Rules and data contract
 
@@ -149,3 +149,9 @@ Recommended supporting measures: median and 10th/90th percentiles for game lengt
 Implement counters at authoritative committed engine events and aggregate in the simulation runner. Keep telemetry deterministic and preserve it through replay/save as appropriate. Include seed, rules/content version, bot-policy version, mode and scenario in exports. The UI presents a compact game-summary panel, a hero-results table and a tactic-income breakdown.
 
 Acceptance: varied rosters still run; paired seeds are reproducible; hero appearances/wins reconcile with match outcomes; per-source tactic receipts sum to earned totals; setup draws stay separate; repeated hero/Recruit defeats count correctly; free effects and multi-step prompts follow the action-count definition; early victory, stalled runs and zero completed-game batches produce clear results. Verify a small hand-counted fixture and the headless/UI report against the same raw results.
+
+Implementation evidence — 5 November 2026
+
+Implemented the simulation dashboard, individual-hero results, completed-game averages and tactic income sources; both roster sizes run with their own budgets. Generated 53 complete card images with a manifest and hash checks, integrated image choices, refreshed the current data/icons, replaced the ongoing-token field with abilityActive, and added a 1,000 ms opponent-card reveal with public history. Content version is card-images-v16.
+
+Validation: 71 tests passed, production build and asset validation passed; 50 three-hero simulations and two four-hero simulations completed. Browser journeys passed at three target sizes. Dedicated simulation-panel and opponent reveal/timing/history checks passed. Evidence is in repository VERIFICATION.md. Physical touch-device and independent unfamiliar-player sessions remain playtest follow-up.

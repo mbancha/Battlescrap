@@ -1,6 +1,6 @@
 {
   "source": "https://docs.google.com/spreadsheets/d/1hfWFhxm-Su-qtR_hVrzFt6GBW1ure8W4xmp1o8hF-Rg/edit",
-  "date": "2026-10-30",
+  "date": "2026-11-05",
   "rows": [
     [
       "ID",
@@ -14,196 +14,196 @@
       "Fire",
       "2",
       "Before my attack roll, add 2 Attack dice.",
-      "Attacker pre-roll window; this attack only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Attacker pre-roll; this attack only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Fire-defense",
       "Fire",
       "1",
       "Before my defense roll, add 2 Defense dice.",
-      "Defender pre-roll window; this defense only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Defender pre-roll; this defense only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Fire-damage",
       "Fire",
       "2",
       "Before my attack roll, add 2 damage if it hits.",
-      "On hit only; apply before Light Attack cap. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Apply hit damage before the Light Attack cap. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Fire-cancel",
       "Fire",
       "1",
-      "Cancel an opponent’s tactic immediately after it is played, including a tactic discarded to activate a hero ability. Prevent its effect or ability.",
-      "Requires an actually committed opponent card; may cancel Cancel. Paid cards/AP remain spent. No prompt for ordinary action/pass. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "During combat, cancel the opponent’s immediately preceding tactic, including Cancel.",
+      "Target the immediately preceding committed opponent combat tactic. A boost advances that opportunity to the newly played tactic. Spent cards remain spent. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Fire-counter",
       "Fire",
       "1",
       "Before my defense roll: if the attack misses, I may counterattack the attacker.",
-      "Optional legal attack on miss; recheck range/living targets. No AP, chains or multiplication. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Optional retaliation against the living original attacker on a miss; recheck range. One retaliation per original attack. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Fire-moveHeal",
       "Fire",
       "1",
       "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
-      "One mode; living legal target. No paid movement counter; apply hazards. Full-HP poisoned heal allowed. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose one mode and a living legal target; apply movement hazards. Healing includes full-HP poisoned units. Granted movement preserves paid-action counters. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Fire-assault",
       "Fire",
       "1",
       "On my turn, each friendly Recruit may make one free attack.",
-      "Choose order; fresh targets/responses; no paid counters; stop on victory. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose Recruit order and fresh targets; resolve ordinary responses. Free attacks preserve paid-action counters. Victory ends the sequence. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Water-attack",
       "Water",
       "2",
       "Before my attack roll, add 2 Attack dice.",
-      "Attacker pre-roll window; this attack only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Attacker pre-roll; this attack only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Water-defense",
       "Water",
       "1",
       "Before my defense roll, add 2 Defense dice.",
-      "Defender pre-roll window; this defense only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Defender pre-roll; this defense only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Water-damage",
       "Water",
       "2",
       "Before my attack roll, add 2 damage if it hits.",
-      "On hit only; apply before Light Attack cap. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Apply hit damage before the Light Attack cap. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Water-cancel",
       "Water",
       "1",
-      "Cancel an opponent’s tactic immediately after it is played, including a tactic discarded to activate a hero ability. Prevent its effect or ability.",
-      "Requires an actually committed opponent card; may cancel Cancel. Paid cards/AP remain spent. No prompt for ordinary action/pass. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "During combat, cancel the opponent’s immediately preceding tactic, including Cancel.",
+      "Target the immediately preceding committed opponent combat tactic. A boost advances that opportunity to the newly played tactic. Spent cards remain spent. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Water-counter",
       "Water",
       "1",
       "Before my defense roll: if the attack misses, I may counterattack the attacker.",
-      "Optional legal attack on miss; recheck range/living targets. No AP, chains or multiplication. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Optional retaliation against the living original attacker on a miss; recheck range. One retaliation per original attack. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Water-moveHeal",
       "Water",
       "1",
       "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
-      "One mode; living legal target. No paid movement counter; apply hazards. Full-HP poisoned heal allowed. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose one mode and a living legal target; apply movement hazards. Healing includes full-HP poisoned units. Granted movement preserves paid-action counters. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Water-assault",
       "Water",
       "1",
       "On my turn, each friendly Recruit may make one free attack.",
-      "Choose order; fresh targets/responses; no paid counters; stop on victory. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose Recruit order and fresh targets; resolve ordinary responses. Free attacks preserve paid-action counters. Victory ends the sequence. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Earth-attack",
       "Earth",
       "2",
       "Before my attack roll, add 2 Attack dice.",
-      "Attacker pre-roll window; this attack only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Attacker pre-roll; this attack only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Earth-defense",
       "Earth",
       "1",
       "Before my defense roll, add 2 Defense dice.",
-      "Defender pre-roll window; this defense only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Defender pre-roll; this defense only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Earth-damage",
       "Earth",
       "2",
       "Before my attack roll, add 2 damage if it hits.",
-      "On hit only; apply before Light Attack cap. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Apply hit damage before the Light Attack cap. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Earth-cancel",
       "Earth",
       "1",
-      "Cancel an opponent’s tactic immediately after it is played, including a tactic discarded to activate a hero ability. Prevent its effect or ability.",
-      "Requires an actually committed opponent card; may cancel Cancel. Paid cards/AP remain spent. No prompt for ordinary action/pass. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "During combat, cancel the opponent’s immediately preceding tactic, including Cancel.",
+      "Target the immediately preceding committed opponent combat tactic. A boost advances that opportunity to the newly played tactic. Spent cards remain spent. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Earth-counter",
       "Earth",
       "1",
       "Before my defense roll: if the attack misses, I may counterattack the attacker.",
-      "Optional legal attack on miss; recheck range/living targets. No AP, chains or multiplication. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Optional retaliation against the living original attacker on a miss; recheck range. One retaliation per original attack. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Earth-moveHeal",
       "Earth",
       "1",
       "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
-      "One mode; living legal target. No paid movement counter; apply hazards. Full-HP poisoned heal allowed. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose one mode and a living legal target; apply movement hazards. Healing includes full-HP poisoned units. Granted movement preserves paid-action counters. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Earth-assault",
       "Earth",
       "1",
       "On my turn, each friendly Recruit may make one free attack.",
-      "Choose order; fresh targets/responses; no paid counters; stop on victory. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose Recruit order and fresh targets; resolve ordinary responses. Free attacks preserve paid-action counters. Victory ends the sequence. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Wind-attack",
       "Wind",
       "2",
       "Before my attack roll, add 2 Attack dice.",
-      "Attacker pre-roll window; this attack only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Attacker pre-roll; this attack only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Wind-defense",
       "Wind",
       "1",
       "Before my defense roll, add 2 Defense dice.",
-      "Defender pre-roll window; this defense only. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Defender pre-roll; this defense only. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Wind-damage",
       "Wind",
       "2",
       "Before my attack roll, add 2 damage if it hits.",
-      "On hit only; apply before Light Attack cap. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Apply hit damage before the Light Attack cap. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Wind-cancel",
       "Wind",
       "1",
-      "Cancel an opponent’s tactic immediately after it is played, including a tactic discarded to activate a hero ability. Prevent its effect or ability.",
-      "Requires an actually committed opponent card; may cancel Cancel. Paid cards/AP remain spent. No prompt for ordinary action/pass. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "During combat, cancel the opponent’s immediately preceding tactic, including Cancel.",
+      "Target the immediately preceding committed opponent combat tactic. A boost advances that opportunity to the newly played tactic. Spent cards remain spent. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Wind-counter",
       "Wind",
       "1",
       "Before my defense roll: if the attack misses, I may counterattack the attacker.",
-      "Optional legal attack on miss; recheck range/living targets. No AP, chains or multiplication. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Optional retaliation against the living original attacker on a miss; recheck range. One retaliation per original attack. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Wind-moveHeal",
       "Wind",
       "1",
       "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
-      "One mode; living legal target. No paid movement counter; apply hazards. Full-HP poisoned heal allowed. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose one mode and a living legal target; apply movement hazards. Healing includes full-HP poisoned units. Granted movement preserves paid-action counters. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ],
     [
       "Wind-assault",
       "Wind",
       "1",
       "On my turn, each friendly Recruit may make one free attack.",
-      "Choose order; fresh targets/responses; no paid counters; stop on victory. Printed effect OR matching assigned-element ability payment, never both. Shared draw/discard; no faction ownership. Tactic faces contain only the element and effect text, without individual card names or faction ownership. Center a large element picture in the top half; retain the existing effect layout and wording below. Keep internal stable IDs for distinct effects/copies; accessibility labels and prompts use element plus effect text."
+      "Choose Recruit order and fresh targets; resolve ordinary responses. Free attacks preserve paid-action counters. Victory ends the sequence. Each card supplies either its printed effect or a matching assigned-element ability payment. Shared draw/discard. Face: large element picture above effect text; accessible label: element and effect. Stable IDs identify definitions and copies."
     ]
   ]
 }

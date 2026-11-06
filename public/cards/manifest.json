@@ -1,0 +1,426 @@
+{
+  "Fire-attack": {
+    "face": "./cards/Fire-attack.png",
+    "width": 180,
+    "height": 252,
+    "label": "Fire-attack",
+    "text": "Before my attack roll, add 2 Attack dice.",
+    "sha256": "b8ac6fc3b411dfecd0068da243d8ce1a5955d1be209a012a003fd2003d606f6a"
+  },
+  "Fire-defense": {
+    "face": "./cards/Fire-defense.png",
+    "width": 180,
+    "height": 252,
+    "label": "Fire-defense",
+    "text": "Before my defense roll, add 2 Defense dice.",
+    "sha256": "92f425a9756a45bcc3a06d0d3d473782ae113dfc4839297c0055d4c27e57b4cd"
+  },
+  "Fire-damage": {
+    "face": "./cards/Fire-damage.png",
+    "width": 180,
+    "height": 252,
+    "label": "Fire-damage",
+    "text": "Before my attack roll, add 2 damage if it hits.",
+    "sha256": "f228b3a421a225a42a195c46702c207bbe3141a145bead733a195ff1c2ffba5c"
+  },
+  "Fire-cancel": {
+    "face": "./cards/Fire-cancel.png",
+    "width": 180,
+    "height": 252,
+    "label": "Fire-cancel",
+    "text": "During combat, cancel the opponent\u2019s immediately preceding tactic, including Cancel.",
+    "sha256": "4f2807e22d7bfb3163eb6a9873ff3c72727635039f9c9c139466a1dcd0477bf9"
+  },
+  "Fire-counter": {
+    "face": "./cards/Fire-counter.png",
+    "width": 180,
+    "height": 252,
+    "label": "Fire-counter",
+    "text": "Before my defense roll: if the attack misses, I may counterattack the attacker.",
+    "sha256": "d784ffb800d052594a261e3011a166e6c57fe3559d4876636a8345828d141774"
+  },
+  "Fire-moveHeal": {
+    "face": "./cards/Fire-moveHeal.png",
+    "width": 180,
+    "height": 252,
+    "label": "Fire-moveHeal",
+    "text": "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
+    "sha256": "80a6f9f3ae588d2a770869078aed6bc7ce37570c325370ce53dcdd58f8e59ed9"
+  },
+  "Fire-assault": {
+    "face": "./cards/Fire-assault.png",
+    "width": 180,
+    "height": 252,
+    "label": "Fire-assault",
+    "text": "On my turn, each friendly Recruit may make one free attack.",
+    "sha256": "35497d66aced889654ad997cebcb36ac1e00b5f34692b42f2b8cb34b63f01f13"
+  },
+  "Water-attack": {
+    "face": "./cards/Water-attack.png",
+    "width": 180,
+    "height": 252,
+    "label": "Water-attack",
+    "text": "Before my attack roll, add 2 Attack dice.",
+    "sha256": "e80c3918cf9ee6e9c47557f85f94509fbb4478eaf82e61eb5c4f8d37d05701ea"
+  },
+  "Water-defense": {
+    "face": "./cards/Water-defense.png",
+    "width": 180,
+    "height": 252,
+    "label": "Water-defense",
+    "text": "Before my defense roll, add 2 Defense dice.",
+    "sha256": "120a8d8f085bdb025638ed02de7898786c48f80c02f6037246319f06d424162a"
+  },
+  "Water-damage": {
+    "face": "./cards/Water-damage.png",
+    "width": 180,
+    "height": 252,
+    "label": "Water-damage",
+    "text": "Before my attack roll, add 2 damage if it hits.",
+    "sha256": "f84b3daf57004315eb93a725c5a4ddccbe61b1fb9ac6336736effcd24f8466cd"
+  },
+  "Water-cancel": {
+    "face": "./cards/Water-cancel.png",
+    "width": 180,
+    "height": 252,
+    "label": "Water-cancel",
+    "text": "During combat, cancel the opponent\u2019s immediately preceding tactic, including Cancel.",
+    "sha256": "ee191c1cab0e33d008078973dba559bf59da94a30e2af493a9506937dcc21ed5"
+  },
+  "Water-counter": {
+    "face": "./cards/Water-counter.png",
+    "width": 180,
+    "height": 252,
+    "label": "Water-counter",
+    "text": "Before my defense roll: if the attack misses, I may counterattack the attacker.",
+    "sha256": "f89b8455bf0c3d1c96d492c3dabb6bee46bf3d1f2128f7c9f05ec4c292cd761b"
+  },
+  "Water-moveHeal": {
+    "face": "./cards/Water-moveHeal.png",
+    "width": 180,
+    "height": 252,
+    "label": "Water-moveHeal",
+    "text": "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
+    "sha256": "be1f9968418b9ef22c2a99169aa8bec27000b567509753f511c76001a2b8a5ca"
+  },
+  "Water-assault": {
+    "face": "./cards/Water-assault.png",
+    "width": 180,
+    "height": 252,
+    "label": "Water-assault",
+    "text": "On my turn, each friendly Recruit may make one free attack.",
+    "sha256": "494ff52df4c259244b7c97467bb1fc69d1285250cd753cd12cafa3d640ebf37a"
+  },
+  "Earth-attack": {
+    "face": "./cards/Earth-attack.png",
+    "width": 180,
+    "height": 252,
+    "label": "Earth-attack",
+    "text": "Before my attack roll, add 2 Attack dice.",
+    "sha256": "c8582e438eac6192e2eeb8cefde6b72f4d8b359b81f1d7f39b6c822714aa3814"
+  },
+  "Earth-defense": {
+    "face": "./cards/Earth-defense.png",
+    "width": 180,
+    "height": 252,
+    "label": "Earth-defense",
+    "text": "Before my defense roll, add 2 Defense dice.",
+    "sha256": "bbb2b2f37765c3a2c24215a77776686611bf69e044fed67c0cc11317a2e0d6ff"
+  },
+  "Earth-damage": {
+    "face": "./cards/Earth-damage.png",
+    "width": 180,
+    "height": 252,
+    "label": "Earth-damage",
+    "text": "Before my attack roll, add 2 damage if it hits.",
+    "sha256": "9221eb4a074d2d0ea768190ed9a489cf561ed980ddfa3ab65d8d79ace260c4ad"
+  },
+  "Earth-cancel": {
+    "face": "./cards/Earth-cancel.png",
+    "width": 180,
+    "height": 252,
+    "label": "Earth-cancel",
+    "text": "During combat, cancel the opponent\u2019s immediately preceding tactic, including Cancel.",
+    "sha256": "11cb4942c628bcfdd2280d1441c5e456ae9bb89f7d80247a5c1206646657c210"
+  },
+  "Earth-counter": {
+    "face": "./cards/Earth-counter.png",
+    "width": 180,
+    "height": 252,
+    "label": "Earth-counter",
+    "text": "Before my defense roll: if the attack misses, I may counterattack the attacker.",
+    "sha256": "1c12005dcf91353228adbbe34ddacf10f6f59e6ccaa7fb106ad988d2cd709202"
+  },
+  "Earth-moveHeal": {
+    "face": "./cards/Earth-moveHeal.png",
+    "width": 180,
+    "height": 252,
+    "label": "Earth-moveHeal",
+    "text": "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
+    "sha256": "2820846755884270a2e18d6dfb765db87c2876e957abfbe5b08f9f3a0e2964ed"
+  },
+  "Earth-assault": {
+    "face": "./cards/Earth-assault.png",
+    "width": 180,
+    "height": 252,
+    "label": "Earth-assault",
+    "text": "On my turn, each friendly Recruit may make one free attack.",
+    "sha256": "61a319c8e44c97201d9c88384b9c65c8e69144616183070e166ff08780aad844"
+  },
+  "Wind-attack": {
+    "face": "./cards/Wind-attack.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wind-attack",
+    "text": "Before my attack roll, add 2 Attack dice.",
+    "sha256": "a9d49b248cffdbf1f4782b28b90ca1d2c0f4fc997b9edadfb2a957221f4c9bf5"
+  },
+  "Wind-defense": {
+    "face": "./cards/Wind-defense.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wind-defense",
+    "text": "Before my defense roll, add 2 Defense dice.",
+    "sha256": "6143c80d6b72d24fdb2169f1faf4b02a1c594761e06cf75335b27a2d832d7ba5"
+  },
+  "Wind-damage": {
+    "face": "./cards/Wind-damage.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wind-damage",
+    "text": "Before my attack roll, add 2 damage if it hits.",
+    "sha256": "b5f400438a10170a26442779f12c6f3de066433c89784738414a1e2fec619c7f"
+  },
+  "Wind-cancel": {
+    "face": "./cards/Wind-cancel.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wind-cancel",
+    "text": "During combat, cancel the opponent\u2019s immediately preceding tactic, including Cancel.",
+    "sha256": "bc7acb345672df586fc90f408a94f8b399ad69ce409f07f56ac707a6f94b161a"
+  },
+  "Wind-counter": {
+    "face": "./cards/Wind-counter.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wind-counter",
+    "text": "Before my defense roll: if the attack misses, I may counterattack the attacker.",
+    "sha256": "3d853fc0dece360de04d79f8b573bb6e82909765c3faf2a21e736662440893f7"
+  },
+  "Wind-moveHeal": {
+    "face": "./cards/Wind-moveHeal.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wind-moveHeal",
+    "text": "On my turn, move one friendly unit up to {hex:4} OR heal it 1 HP and remove all its Poison.",
+    "sha256": "0863084e2741abbacb0e5799aca2e897bb9f31b4c5e05cccc8367b150a2269dc"
+  },
+  "Wind-assault": {
+    "face": "./cards/Wind-assault.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wind-assault",
+    "text": "On my turn, each friendly Recruit may make one free attack.",
+    "sha256": "e2ce2df933d20fc7502da819827aecdf0e365489d4f26c39a93396a55cf6f448"
+  },
+  "equipment-boots": {
+    "face": "./cards/equipment-boots.png",
+    "width": 180,
+    "height": 144,
+    "label": "Trail Boots",
+    "text": "+{hex:1} Move (maximum 7).",
+    "sha256": "6b9a1df4835770d51082eea55e0074223ea84afb1a962c8339f57f158f154afe"
+  },
+  "equipment-shield": {
+    "face": "./cards/equipment-shield.png",
+    "width": 180,
+    "height": 144,
+    "label": "Bellmetal Shield",
+    "text": "+1 Defense die versus melee.",
+    "sha256": "6764b8508ad0f7e4740372e9defdd25b8fd23dc6b82f18a0f8e7daf2825d3d83"
+  },
+  "equipment-weapon": {
+    "face": "./cards/equipment-weapon.png",
+    "width": 180,
+    "height": 144,
+    "label": "Balanced Weapon",
+    "text": "+1 basic Attack die.",
+    "sha256": "c201f41e1617b8dd1c0e43c420aba9bc7beaeddbfba0e207e8d344b00c2b8895"
+  },
+  "equipment-lens": {
+    "face": "./cards/equipment-lens.png",
+    "width": 180,
+    "height": 144,
+    "label": "Sighting Lens",
+    "text": "+{hex:1} ordinary ranged attack range.",
+    "sha256": "8cd6199630c164fb48735163d5d787ae3cbb7a61c5f0ef5a3ad63f0cbe0efe0a"
+  },
+  "recruit-concord": {
+    "face": "./cards/recruit-concord.png",
+    "width": 180,
+    "height": 252,
+    "label": "Concord",
+    "text": "",
+    "sha256": "b878caf440f09bb2826ac7f17611ede7a69e97b460166c5ec30fb1648e97eedf"
+  },
+  "recruit-wildmoon": {
+    "face": "./cards/recruit-wildmoon.png",
+    "width": 180,
+    "height": 252,
+    "label": "Wildmoon",
+    "text": "",
+    "sha256": "bf2fe4609541c25cb098d85a686e82f069e784ed67578a54f9ceeed957403644"
+  },
+  "recruit-boots": {
+    "face": "./cards/recruit-boots.png",
+    "width": 180,
+    "height": 144,
+    "label": "Recruit Boots",
+    "text": "All friendly Recruits gain +1 Move.",
+    "sha256": "5647b9a09a3cbb71cfd7e4c9da7a033015018be4ab2328db64683603163b7417"
+  },
+  "recruit-shield": {
+    "face": "./cards/recruit-shield.png",
+    "width": 180,
+    "height": 144,
+    "label": "Recruit Shields",
+    "text": "All friendly Recruits gain +1 Defense.",
+    "sha256": "d76e32075a1c3c3d8bc3dc3479180a93a1e6a944b5a68f26596eac6b1c394c2f"
+  },
+  "recruit-weapon": {
+    "face": "./cards/recruit-weapon.png",
+    "width": 180,
+    "height": 144,
+    "label": "Recruit Weapons",
+    "text": "All friendly Recruits gain +1 Attack.",
+    "sha256": "0ad286cda003b13b549ab9abff8b5aa3f6e217f72473c4309e9c3ff3810abf73"
+  },
+  "h01": {
+    "face": "./cards/h01.png",
+    "width": 180,
+    "height": 252,
+    "label": "Bisti Grasshade",
+    "text": "I make a [Ranged Attack] 3({hex:3}) with Heavy Attack(2). I must target an enemy which has none of my allies adjacent to it.",
+    "sha256": "dda729aae696d5576fcbb415ca0b3c1e27fe56c5626eb26f21e9f9db4c83cd9a"
+  },
+  "h03": {
+    "face": "./cards/h03.png",
+    "width": 180,
+    "height": 252,
+    "label": "Voru Cinderveil",
+    "text": "I Pull an enemy within {hex:4} up to {hex:3}. For each hex pulled, I give my nearest ally 1 Enraged.",
+    "sha256": "0a9bab1c07bf56e0585660293c6020401d9aff233cdcfd3bdb973324923f8f7c"
+  },
+  "h04": {
+    "face": "./cards/h04.png",
+    "width": 180,
+    "height": 252,
+    "label": "Tavi Sailwhistle",
+    "text": "Each time a Recruit ends their movement adjacent to an enemy this turn, I draw a Tactic card.",
+    "sha256": "272a7430e14243aadf06bb1fb5829f491d03a9d0bf27eb84046419dc66487c89"
+  },
+  "h11": {
+    "face": "./cards/h11.png",
+    "width": 180,
+    "height": 252,
+    "label": "Hester Wellward",
+    "text": "I move up to {hex:3} in a straight line, then each adjacent ally gains 2 Fortified.",
+    "sha256": "9cec50a2bca7150612ade2a085d7e5d20ca0369d07e27cfe72b2871b385741f1"
+  },
+  "h13": {
+    "face": "./cards/h13.png",
+    "width": 180,
+    "height": 252,
+    "label": "Demea Lastbanner",
+    "text": "My adjacent allies have Heavy Attack(2).",
+    "sha256": "d4365505286dd87c04a48f3914acf725797c8cd61b446859418b6722737c663d"
+  },
+  "h06": {
+    "face": "./cards/h06.png",
+    "width": 180,
+    "height": 252,
+    "label": "Niala Grassveil",
+    "text": "I move another ally within {hex:3} up to {hex:2}, then give one enemy adjacent to that ally 1 Dazed.",
+    "sha256": "486525a2af03b111eaccbfce6085f456223285e75b311f83b96e1761c8405fad"
+  },
+  "h08": {
+    "face": "./cards/h08.png",
+    "width": 180,
+    "height": 252,
+    "label": "Ketu Ashheart",
+    "text": "I gain 2 Enraged and 1 Dazed.",
+    "sha256": "248824a5bd9d9bad8a5349323680fed137c096bf1868d2ec4540259e3b983fc2"
+  },
+  "h10": {
+    "face": "./cards/h10.png",
+    "width": 180,
+    "height": 252,
+    "label": "Orro Stormanchor",
+    "text": "Push up to two adjacent enemies up to {hex:2} each, then give them each 1 Dazed.",
+    "sha256": "b29999ead4061315061b1efa9c61c23471bf561638b5aeb68570a7eb5eb5f2b4"
+  },
+  "h12": {
+    "face": "./cards/h12.png",
+    "width": 180,
+    "height": 252,
+    "label": "Perrin Lastdrop",
+    "text": "I gain 2 Enraged. While I have Enraged, other adjacent allies gain +1 Attack die.",
+    "sha256": "c411a4407e73a2a665c9f27b73897f44ef9436bb4168f40e5a9796a44dbda436"
+  },
+  "h14": {
+    "face": "./cards/h14.png",
+    "width": 180,
+    "height": 252,
+    "label": "Ilex Marchstep",
+    "text": "I move another adjacent ally up to {hex:3}, then I move up to {hex:3}.",
+    "sha256": "53ca7749b1e00c14e506d824cc74f7930ab45a5f04dde109d4942e641ce87c43"
+  },
+  "objective-0": {
+    "face": "./cards/objective-0.png",
+    "width": 180,
+    "height": 252,
+    "label": "Close the Net",
+    "text": "Attack an enemy adjacent to at least three of my allies. Reward: 1 VP and 1 tactic.",
+    "sha256": "dd770ec166c95fff159caa255bd8c8af086970e8054a838f38cfe6af68d46856"
+  },
+  "objective-1": {
+    "face": "./cards/objective-1.png",
+    "width": 180,
+    "height": 252,
+    "label": "Break the Levy",
+    "text": "Attack two different enemy Recruits in one turn. Reward: 1 VP and 1 tactic.",
+    "sha256": "f521e491ecb4f7452e52cfe06c61f4d63201e72b8ba51cf69dbd7f164a0a6293"
+  },
+  "objective-2": {
+    "face": "./cards/objective-2.png",
+    "width": 180,
+    "height": 252,
+    "label": "Into the Teeth",
+    "text": "Attack an enemy with a hero adjacent to at least two enemies. Reward: 1 VP and 1 tactic.",
+    "sha256": "7edddfe2e7bf027e02ee38462aa4a66e78fddd8fcd326dfe84d9aed1baacc374"
+  },
+  "objective-3": {
+    "face": "./cards/objective-3.png",
+    "width": 180,
+    "height": 252,
+    "label": "Pin Them Down",
+    "text": "End my turn with three friendly Recruits adjacent to the same enemy. Reward: 1 VP and 1 tactic.",
+    "sha256": "4b7619896860c2b8e1c1554150673d014c3dc589297846bd623e26e86a78cbe2"
+  },
+  "objective-4": {
+    "face": "./cards/objective-4.png",
+    "width": 180,
+    "height": 252,
+    "label": "At Their Gates",
+    "text": "End my turn with at least two friendly units adjacent to the enemy spawn area. Reward: 1 VP and 1 tactic.",
+    "sha256": "c1d0fad702bfa3a3ac93b6bf21cc48dcf5a33e4bc3b47627656225923d36cd82"
+  },
+  "objective-5": {
+    "face": "./cards/objective-5.png",
+    "width": 180,
+    "height": 252,
+    "label": "Claim the Starfall",
+    "text": "End my turn with all my heroes occupying printed X locations. Reward: 1 VP and 1 tactic.",
+    "sha256": "d54d26bd331b31501d47a6b963a10c6ff64677ede809fab0d17254dae7e09c80"
+  }
+}
