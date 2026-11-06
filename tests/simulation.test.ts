@@ -11,3 +11,4 @@ it('reports individual heroes and completed-game denominators',()=>{
  expect(summarize(games).map(r=>r.id).sort()).toEqual(['h01','h03','h06']);expect(summarize(games).find(r=>r.id==='h01')?.rate).toBe(1);
  expect(gameSummary(games)).toMatchObject({completed:1,unfinished:1,meanTurns:10,meanActions:6,meanHeroDeaths:1,meanRecruitDeaths:3,meanTacticsEarned:2});expect(gameSummary([]).meanTurns).toBe(null);
 });
+it('interpolates the median for even completed-game samples',()=>{const games:any=[10,20].map(turns=>({complete:true,teams:[[],[]],metrics:{turns}}));expect(gameSummary(games).turnsMedian).toBe(15);});
