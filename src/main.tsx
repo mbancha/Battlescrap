@@ -4,5 +4,3 @@ import App from './App';
 import './styles.css';
 createRoot(document.getElementById('root')!).render(<App/>);
 import './update.css';
-
-import './tabletop.css';
